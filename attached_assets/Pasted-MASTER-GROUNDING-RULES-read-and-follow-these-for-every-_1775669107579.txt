@@ -1,0 +1,190 @@
+MASTER GROUNDING RULES — read and follow these for every task in this session:
+
+You are working on an existing Next.js 14 App Router website (src/app/) with Prismic CMS + Puck editor. ~30 components in src/components/. Content data in src/content/.
+
+CRITICAL RULES:
+1. Do NOT remove, rewrite, or refactor any existing pages, sections, components, or functionality
+2. This is ADDITIVE ONLY — add new pages, new components, new data files alongside existing ones
+3. Preserve current architecture, styling, routes, and existing components
+4. Every new page must be: production-quality, responsive, SEO-friendly, premium B2B design
+5. Use existing design tokens, colors, and CSS patterns from current components
+6. First state which files you will create, then create them
+7. No breaking changes, no unrelated dependency changes
+
+Now execute ALL of the following tasks in sequence. Do not stop until all are complete:
+
+--- TASK 1: ENHANCED RESOURCES HUB ---
+Overhaul src/app/resources/page.tsx additively. Make it a world-class editorial Resource Hub with:
+- Answer-first H1 + 50-word SEO summary intro
+- Filter tabs: All | Guides | Templates | Calculators | Comparisons | Case Studies | Insights
+- Resource cards grid (3-col desktop, 2-col tablet, 1-col mobile) with: title, description, category badge, type icon, CTA button, estimated read time
+- Create src/content/resources-data.ts with 20 seed resource items across all categories
+- Featured resources hero strip (top 3 highlighted)
+- CTA band: 'Cant find what you need? Book a free audit'
+- Each card links to real or placeholder routes
+- Premium dark/light premium B2B styling consistent with site
+
+Resource seed data to include:
+GUIDE: 'B2B Website Growth System 2026', 'AI Search Optimization Checklist', 'Brand Positioning Framework', 'Content Hub Planning Guide', 'Homepage CRO Teardown Framework'
+TEMPLATE: 'Website Growth Audit Checklist', 'Marketing Stack Audit Worksheet', 'Homepage Wireframe Checklist', 'Service Page Messaging Framework', 'B2B Lead Magnet Planning Template'
+CALCULATOR: 'ROI Calculator', 'Content ROI Calculator', 'Growth Readiness Score'
+COMPARISON: 'HubSpot vs Pipedrive for B2B', 'Notion vs Airtable for Marketing Teams', 'Webflow vs WordPress for Agencies'
+CASE STUDY: 'How We 3x-ed Inbound Leads for a SaaS Brand', 'Website Redesign That Cut Bounce Rate by 40%'
+INSIGHT: 'Why GEO Will Replace SEO in 2026', 'The Death of Generic Agency Websites'
+
+--- TASK 2: GROWTH STACK AFFILIATE HUB ---
+Create src/app/growth-stack/page.tsx (new route: /growth-stack) as a premium affiliate + tool recommendation hub:
+- H1: 'The MagnifAI Growth Stack' + answer-first 50-word summary
+- Affiliate disclosure banner at top (tasteful, professional)
+- Tool categories as tabbed sections: CRM | SEO & GEO | Email Marketing | Analytics | Automation | AI Writing | Design & Brand | Scheduling
+- Each tool card: tool name, logo placeholder (emoji or initials), short summary, Best For label, 'Why We Recommend It' blurb, affiliate link placeholder (#), implementation CTA
+- Create src/content/growth-stack-data.ts with 24 tools across 8 categories
+- Bottom section: 'Want us to set this up for you?' service CTA band
+- Premium B2B table/card hybrid layout
+
+Tool seed data:
+CRM: HubSpot (best for: growing teams), Pipedrive (best for: sales-focused SMBs)
+SEO: Ahrefs (best for: serious content teams), Semrush (best for: agencies), Surfer SEO (best for: AI-optimized content)
+Email: Mailchimp (best for: beginners), ConvertKit (best for: creators/founders), Klaviyo (best for: eCommerce)
+Analytics: Google Analytics 4 (best for: all), Hotjar (best for: CRO), Mixpanel (best for: SaaS)
+Automation: Make.com (best for: no-code workflows), Zapier (best for: quick integrations), n8n (best for: self-hosted)
+AI Writing: Jasper (best for: marketing copy), Claude (best for: long-form strategy), Perplexity (best for: research)
+Design: Canva (best for: non-designers), Figma (best for: design teams)
+Scheduling: Calendly (best for: consultants), Cal.com (best for: open source preference)
+
+--- TASK 3: LEAD MAGNET LANDING PAGE ---
+Create src/app/lead-magnets/website-audit-checklist/page.tsx (new route):
+- Hero: 'Download the Website Growth Audit Checklist' — bold, conversion-focused
+- 50-word answer-first summary
+- 'What's Inside' section: 6 bullet points of checklist sections
+- 'Who This Is For' section: 3 persona cards (Founders, Marketing Leads, Agency Teams)
+- 'What You'll Achieve' outcomes: 4 specific measurable outcomes
+- Form section: Name + Email + Company + Download CTA button (mock submit → /thank-you)
+- Social proof: '2,400+ downloads' + 3 testimonial quotes (placeholder)
+- FAQ section: 4 questions
+- Related resources CTA strip
+- Design: premium, high-contrast, conversion-optimized
+
+--- TASK 4: ENHANCED ROI CALCULATOR ---
+Overhaul src/app/tools/roi/page.tsx additively. Make it a full interactive ROI calculator:
+- Answer-first H1: 'Calculate Your Growth ROI' + 50-word summary
+- Interactive calculator with inputs:
+  * Monthly website visitors (slider + number input)
+  * Current conversion rate % (slider)
+  * Average deal/project value £/$ (input)
+  * Target conversion rate improvement % (slider)
+  * Time horizon: 3 / 6 / 12 months (toggle)
+- Real-time output panel:
+  * Extra leads per month
+  * Extra revenue per month  
+  * Annual revenue upside
+  * ROI multiplier
+  * 'At MagnifAI's rates, this pays back in X weeks' line
+- Results CTA: 'Ready to achieve this? Book a free strategy call'
+- How we calculate section (transparency/trust)
+- Related tools strip linking to other /tools/ pages
+- Make component isolated and exportable for embedding elsewhere
+- Full client-side calculation, no backend needed
+
+--- TASK 5: COMPARISON ENGINE ---
+Create a comparison page system:
+a) Create src/content/comparisons-data.ts with 3 full comparison datasets:
+   - hubspot-vs-pipedrive, notion-vs-airtable, webflow-vs-wordpress
+   Each dataset: toolA name/description, toolB name/description, feature comparison table (8 features), best-for section, verdict, pros/cons each, 4 FAQs
+
+b) Create src/app/compare/[slug]/page.tsx — dynamic comparison page template:
+   - Answer-first summary + H1 '[Tool A] vs [Tool B]: Which Is Right for Your Business?'
+   - Quick verdict box (highlighted)
+   - Feature comparison table with checkmarks/ratings
+   - Pros & Cons side-by-side
+   - Best-For section (who should pick which)
+   - Detailed breakdown sections
+   - FAQ block
+   - Related comparisons strip
+   - CTA: 'Need help choosing and implementing the right stack?'
+
+c) Create src/app/compare/page.tsx — comparisons index page listing all comparisons
+
+--- TASK 6: ADDITIVE HOMEPAGE SECTIONS ---
+Add these new sections to src/app/page.tsx WITHOUT removing or changing any existing content. Insert them in the most logical positions:
+
+a) RESOURCE HUB PREVIEW STRIP — after services section:
+   - Title: 'Explore Our Resource Hub'
+   - Show 3 featured resource cards pulled from resources-data.ts
+   - 'View All Resources →' CTA linking to /resources
+
+b) GROWTH STACK TEASER — after resource strip:
+   - Title: 'Tools We Trust & Recommend'
+   - 4 tool logos/names in a clean strip with 'Explore Full Growth Stack →' CTA
+
+c) LEAD MAGNET CTA BAND — prominent section:
+   - Background: brand accent color
+   - Title: 'Get the Website Growth Audit Checklist — Free'
+   - Subtitle: 'Used by 2,400+ founders and growth teams'
+   - Download CTA → /lead-magnets/website-audit-checklist
+
+d) LATEST INSIGHTS PREVIEW — 3 insight cards from existing /insights pages:
+   - Link to /insights for all
+
+e) NEWSLETTER CTA STRIP:
+   - 'Join 3,000+ Founders Getting Weekly Growth Intelligence'
+   - Email input + Subscribe button (mock)
+   - Link to /newsletter
+
+--- TASK 7: PLAYBOOKS SECTION ---
+Create src/app/playbooks/page.tsx (index) and 3 playbook pages:
+a) src/app/playbooks/b2b-growth-system-2026/page.tsx
+b) src/app/playbooks/ai-search-optimization-guide/page.tsx  
+c) src/app/playbooks/website-redesign-checklist/page.tsx
+
+Each playbook page:
+- Premium long-form layout
+- Answer-first H1 + 60-word summary (GEO-optimized)
+- Table of contents sidebar
+- Structured sections with H2/H3 hierarchy
+- Key takeaway boxes
+- Related resources strip
+- CTA at bottom
+- Schema-ready HTML structure
+
+Index page: grid of all playbooks with category, read time, description
+
+--- TASK 8: NEWSLETTER PAGE ---
+Create src/app/newsletter/page.tsx:
+- H1: 'Growth Intelligence Weekly' — premium digest for founders & operators
+- Value proposition: what subscribers get each week (5 bullets)
+- Issue preview: show 3 sample newsletter topics/headlines
+- Signup form: Name + Email + 'Join Free' button (mock submit)
+- Trust section: '3,000+ subscribers', 'No spam', 'Unsubscribe anytime'
+- Recent issues archive grid (3 placeholder issue cards)
+- Testimonials: 3 quotes from placeholder subscribers
+
+--- TASK 9: SCHEMA UTILITY LAYER ---
+Create src/lib/schema.ts with reusable schema generators:
+- generateOrganizationSchema()
+- generateArticleSchema(title, description, datePublished, dateModified)
+- generateFAQSchema(faqs: {question, answer}[])
+- generateBreadcrumbSchema(items: {name, url}[])
+- generateHowToSchema(title, steps: {name, text}[])
+
+Wire up to resources page only as first example. Add <script type='application/ld+json'> output in page head.
+
+--- TASK 10: GLOSSARY PAGE ---
+Create src/app/glossary/page.tsx:
+- H1: 'Growth & Marketing Glossary'
+- Answer-first intro
+- Alphabet navigation (A-Z anchor links)
+- 30 terms across: Brand Strategy, Growth Marketing, SEO/GEO, AI Automation, CRO, Website Strategy
+- Each term: term name, definition (2-3 sentences), related terms links, related resource link
+- Clean, readable, authority-building design
+- Schema-ready definition list structure
+
+--- TASK 11: INDUSTRIES PAGE ---
+Create src/app/industries/page.tsx:
+- H1: 'Growth Solutions by Industry'
+- 6 industry cards: SaaS & Tech, Professional Services, E-commerce, Startups & Scaleups, Creative Agencies, Healthcare & Wellness
+- Each card: industry name, key challenges, how MagnifAI helps, CTA
+- Answer-first intro
+- CTA band at bottom
+
+After completing all tasks, give me a summary of all files created/modified.
