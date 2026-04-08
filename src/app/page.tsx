@@ -36,7 +36,7 @@ async function getPageData() {
     }
 
     // 2. Try Prismic (only if explicitly enabled)
-    if (process.env.ENABLE_PRISMIC === 'true') {
+    if (process.env.ENABLE_PRISMIC === 'true' && process.env.PRISMIC_ACCESS_TOKEN) {
         try {
             const client = createClient();
             const page = await client.getSingle("homepage" as any);
