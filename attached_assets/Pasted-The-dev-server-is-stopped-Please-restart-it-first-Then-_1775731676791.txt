@@ -1,0 +1,45 @@
+The dev server is stopped. Please restart it first. Then build ALL the following missing/broken pages as full, production-quality Next.js pages with proper content, matching the site's dark theme (navy/violet/cyan color scheme):
+
+1. /case-studies - Case Studies listing page with 6 detailed case study cards (client name, industry, challenge, solution, results with metrics like ROI%, revenue uplift, time saved). Add individual case study pages at /case-studies/[slug].
+
+2. /services/brand-strategy - Full service page for Brand Strategy with hero, what's included, process steps, pricing tiers, FAQ, CTA
+
+3. /services/development - Full service page for Website Growth/Development  
+
+4. /services/ai-automation - Full service page for AI Automation
+
+5. /services/marketing - Full service page for Content & SEO / Digital Marketing
+
+6. /services/creative - Full service page for Conversion Systems / Creative Design
+
+7. /services/seo - Full SEO Optimization service page
+
+8. /services/content - Full Content Strategy service page
+
+9. /services/ecommerce - Full E-commerce Scaling service page
+
+10. /services/branding - Full Brand Identity service page
+
+11. /company/about - About page with team, mission, values, stats, story
+
+12. /company/careers - Careers page with open positions, culture, benefits
+
+13. /company/contact - Contact page with form, calendar booking, office info
+
+14. /contact - Contact redirect or full contact page
+
+15. /blog/[slug] - Individual blog post pages for: future-of-ai-agencies, react-server-components-ai, viral-loops-automation, email-infrastructure, agentic-workflows-2026, local-llm-privacy (each needs full article content with 800+ words)
+
+16. /insights/zero-inbox - Full insight article page
+
+17. /lead-magnets/website-audit-checklist - Lead magnet download page with checklist preview and email gate
+
+18. /tools/roi - Full ROI Calculator page
+
+19. /tools/token - Token Estimator tool page
+
+20. /submit - Submit a Tool page with form
+
+21. /login - Login page UI
+
+For each page: use the existing global CSS variables, Navbar and Footer components. Make content rich, SEO-optimized with proper H1-H6 hierarchy, meta descriptions. Match the existing site's dark aesthetic perfectly. Do NOT break any existing pages.
