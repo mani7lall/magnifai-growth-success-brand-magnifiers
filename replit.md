@@ -26,6 +26,7 @@ A full-featured Next.js 16 (App Router) agency website for WeMagnifAI, "The AI G
 - `'use client'` only when event handlers or state are needed.
 - Service pages use `src/app/services/services.module.css` with `--accent-color` CSS variable per page.
 - Prismic only initialises when `ENABLE_PRISMIC=true` AND `PRISMIC_ACCESS_TOKEN` are both set.
+- **Next.js 16 `params` rule:** All dynamic `[slug]` page components and `generateMetadata` functions MUST be `async` and use `const { slug } = await params`. Type: `params: Promise<{ slug: string }>`. Applied to: `/blog/[slug]`, `/case-studies/[slug]`, `/compare/[slug]`, `/legal/[slug]`, `/company/[slug]`, `/services/[slug]`.
 
 ## Site Structure
 

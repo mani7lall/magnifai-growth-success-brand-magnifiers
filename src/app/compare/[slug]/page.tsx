@@ -10,8 +10,9 @@ export async function generateStaticParams() {
     return getAllComparisonSlugs().map(slug => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const comparison = getComparisonBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const comparison = getComparisonBySlug(slug);
     if (!comparison) return {};
     return {
         title: `${comparison.toolA.name} vs ${comparison.toolB.name} — WeMagnifAI`,
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function ComparisonPage({ params }: { params: { slug: string } }) {
-    const comparison = getComparisonBySlug(params.slug);
+export default async function ComparisonPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const comparison = getComparisonBySlug(slug);
     if (!comparison) notFound();
 
     const faqSchema = generateFAQSchema(comparison.faqs);
