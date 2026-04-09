@@ -173,6 +173,182 @@ export default async function Home() {
                 {/* Services Grid */}
                 <ServicesGrid />
 
+                {/* === SECTION A: RESOURCE HUB PREVIEW (Violet) === */}
+                <section style={{
+                    padding: '7rem 2rem',
+                    borderTop: '1px solid var(--border-accent)',
+                    background: 'var(--gradient-card)',
+                }}>
+                    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+                            <p style={{
+                                fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
+                                textTransform: 'uppercase', color: 'var(--accent-primary)',
+                                marginBottom: '1rem',
+                            }}>
+                                Resource Hub
+                            </p>
+                            <h2 style={{
+                                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                fontFamily: 'var(--font-playfair)',
+                                fontWeight: 700, lineHeight: 1.15, margin: '0 0 1rem',
+                                background: 'var(--gradient-hero)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text',
+                            }}>
+                                Everything You Need to Grow
+                            </h2>
+                            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6, maxWidth: '480px', margin: '0 auto' }}>
+                                Guides, templates, calculators — all free.
+                            </p>
+                        </div>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                            gap: '1.5rem',
+                        }}>
+                            {[
+                                { emoji: '📖', label: 'PLAYBOOK', title: 'B2B Growth System 2026', href: '/playbooks/b2b-growth-system-2026' },
+                                { emoji: '📊', label: 'CALCULATOR', title: 'Growth ROI Calculator', href: '/tools/roi' },
+                                { emoji: '⚡', label: 'GUIDE', title: 'AI Search Optimisation Checklist', href: '/playbooks/ai-search-optimization-guide' },
+                            ].map(card => (
+                                <Link key={card.href} href={card.href} style={{
+                                    display: 'block', textDecoration: 'none',
+                                    background: 'rgba(139,92,246,0.06)',
+                                    border: '1px solid var(--border-accent)',
+                                    borderRadius: '1.25rem', padding: '2rem',
+                                    transition: 'all 0.25s',
+                                }}>
+                                    <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{card.emoji}</div>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        background: 'rgba(139,92,246,0.15)', color: 'var(--accent-glow)',
+                                        border: '1px solid var(--border-accent)',
+                                        fontSize: '10px', fontWeight: 700,
+                                        padding: '0.2rem 0.6rem', borderRadius: '999px',
+                                        textTransform: 'uppercase', letterSpacing: '0.08em',
+                                        marginBottom: '0.75rem',
+                                    }}>{card.label}</span>
+                                    <h3 style={{ color: '#fff', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.35, margin: 0 }}>
+                                        {card.title}
+                                    </h3>
+                                    <p style={{ color: 'var(--accent-glow)', fontSize: '0.85rem', fontWeight: 600, marginTop: '1rem' }}>
+                                        Read →
+                                    </p>
+                                </Link>
+                            ))}
+                        </div>
+                        <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+                            <Link href="/resources" style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                background: 'linear-gradient(135deg,#8B5CF6,#6366F1)',
+                                color: '#fff', fontWeight: 700, textDecoration: 'none',
+                                padding: '0.875rem 2rem', borderRadius: '0.75rem',
+                                boxShadow: '0 8px 32px rgba(139,92,246,0.4)',
+                            }}>
+                                Browse All Resources →
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* === SECTION B: GROWTH STACK TEASER (Violet) === */}
+                <section style={{
+                    padding: '6rem 2rem',
+                    background: 'rgba(139,92,246,0.04)',
+                    borderTop: '1px solid var(--border-accent)',
+                    borderBottom: '1px solid var(--border-accent)',
+                }}>
+                    <div style={{
+                        maxWidth: '1200px', margin: '0 auto',
+                        display: 'flex', gap: '4rem', alignItems: 'center',
+                        flexWrap: 'wrap',
+                    }}>
+                        {/* Left */}
+                        <div style={{ flex: '1', minWidth: '280px' }}>
+                            <p style={{
+                                fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
+                                textTransform: 'uppercase', color: 'var(--accent-primary)',
+                                marginBottom: '1rem',
+                            }}>
+                                Growth Stack
+                            </p>
+                            <h2 style={{
+                                fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+                                fontFamily: 'var(--font-playfair)', color: '#fff',
+                                fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem',
+                            }}>
+                                Tools We Actually Use
+                            </h2>
+                            <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '400px' }}>
+                                24 battle-tested tools across 8 categories.
+                            </p>
+                            <Link href="/growth-stack" style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                background: 'var(--accent-primary)',
+                                color: '#fff', fontWeight: 700, textDecoration: 'none',
+                                padding: '0.875rem 2rem', borderRadius: '0.75rem',
+                                boxShadow: 'var(--glow-violet)',
+                            }}>
+                                Explore Growth Stack →
+                            </Link>
+                        </div>
+                        {/* Right: pill tags */}
+                        <div style={{ flex: '1', minWidth: '280px', display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                            {['HubSpot', 'Ahrefs', 'Make.com', 'ConvertKit', 'Hotjar', 'Claude', 'Figma', 'Calendly'].map(tool => (
+                                <span key={tool} style={{
+                                    background: 'rgba(139,92,246,0.1)',
+                                    border: '1px solid var(--border-accent)',
+                                    color: '#C4B5FD',
+                                    borderRadius: '999px',
+                                    padding: '0.5rem 1.1rem',
+                                    fontSize: '0.9rem',
+                                    fontWeight: 600,
+                                }}>
+                                    {tool}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* === SECTION C: LEAD MAGNET CTA BAND (Violet-Cyan) === */}
+                <section style={{
+                    padding: '7rem 2rem',
+                    background: 'linear-gradient(135deg,rgba(139,92,246,0.15),rgba(34,211,238,0.08))',
+                    textAlign: 'center',
+                }}>
+                    <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+                        <p style={{
+                            fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
+                            textTransform: 'uppercase', color: 'var(--accent-cyan)',
+                            marginBottom: '1.25rem',
+                        }}>
+                            Free Download
+                        </p>
+                        <h2 style={{
+                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                            fontFamily: 'var(--font-playfair)', color: '#fff',
+                            fontWeight: 800, lineHeight: 1.15, marginBottom: '1.25rem',
+                        }}>
+                            Website Growth Audit Checklist
+                        </h2>
+                        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
+                            The exact 47-point checklist used before every client engagement. 2,400+ downloads.
+                        </p>
+                        <Link href="/lead-magnets/website-audit-checklist" style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                            background: 'linear-gradient(135deg,#8B5CF6,#22D3EE)',
+                            color: '#fff', fontWeight: 800, textDecoration: 'none',
+                            padding: '1rem 2.5rem', borderRadius: '0.875rem', fontSize: '1.05rem',
+                            boxShadow: '0 8px 32px rgba(139,92,246,0.4)',
+                        }}>
+                            Download Free →
+                        </Link>
+                    </div>
+                </section>
+
                 {/* RESOURCE HUB PREVIEW STRIP */}
                 <section style={{
                     padding: '6rem 2rem',

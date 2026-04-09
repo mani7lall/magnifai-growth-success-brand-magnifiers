@@ -25,6 +25,8 @@ export default function Footer() {
                             <Link href="/whatsapp-calculator">WhatsApp ROI Calculator</Link>
                             <Link href="/ai-templates">AI Content Templates</Link>
                             <Link href="/automation-checklist">Automation Checklist</Link>
+                            <Link href="/tools/roi">ROI Calculator</Link>
+                            <Link href="/glossary">Glossary</Link>
                         </div>
 
                         <div className={styles.linkColumn}>
@@ -33,6 +35,8 @@ export default function Footer() {
                             <Link href="/resources">Resources</Link>
                             <Link href="/tools">Tools</Link>
                             <Link href="/prompts">Prompts</Link>
+                            <Link href="/growth-stack">Growth Stack</Link>
+                            <Link href="/compare">Comparisons</Link>
                         </div>
 
                         <div className={styles.linkColumn}>
