@@ -1,8 +1,8 @@
 .section {
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
+    background: linear-gradient(to bottom, #0a0a14, #0d0d1e);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .container {

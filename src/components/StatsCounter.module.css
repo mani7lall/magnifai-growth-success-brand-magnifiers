@@ -5,7 +5,9 @@
     padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to right, #0d0d18, #0f0f1f, #0d0d18);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .metricItem {
@@ -16,12 +18,13 @@
     display: block;
     font-size: 2.5rem;
     font-weight: 800;
-    color: #fff;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
+
+.metricValue0 { color: #a78bfa; }
+.metricValue1 { color: #22d3ee; }
+.metricValue2 { color: #34d399; }
+.metricValue3 { color: #f472b6; }
 
 .metricLabel {
     color: #64748b;

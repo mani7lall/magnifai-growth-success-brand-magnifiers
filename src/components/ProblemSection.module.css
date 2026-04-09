@@ -1,3 +1,7 @@
+.section {
+    background: #07070f !important;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -5,12 +9,19 @@
     align-items: center;
 }
 
+.left {}
+.right {}
+
 .heading {
     font-size: 4rem;
     line-height: 1;
-    color: #000;
+    color: #fff;
     margin-bottom: 2rem;
     letter-spacing: -0.03em;
+    background: linear-gradient(to bottom, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .strikethrough {
@@ -21,26 +32,44 @@
 
 .lead {
     font-size: 1.5rem;
-    color: #475569;
+    color: #71717a;
     line-height: 1.6;
 }
 
 .card {
-    padding: 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 0.75rem;
+    border-left: 2px solid rgba(139, 92, 246, 0.4);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .card h3 {
     font-family: var(--font-manrope);
-    color: #000;
+    color: #fff;
     font-size: 1.25rem;
-    margin: 1rem 0 0.5rem 0;
+    margin: 0.75rem 0 0.5rem 0;
 }
 
 .card p {
-    color: #64748b;
+    color: #71717a;
     margin: 0;
+}
+
+.iconWrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 50%;
+    color: #ef4444;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.2);
+    flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {

@@ -2,6 +2,7 @@
 import type { Config } from '@measured/puck'
 import HomeHero from '@/components/HomeHero'
 import StatsCounter from '@/components/StatsCounter'
+import TelegramSpotlightBlock from '@/components/TelegramSpotlightBlock'
 import TrustedBy from '@/components/TrustedBy'
 import Testimonials from '@/components/Testimonials'
 import ServicesGrid from '@/components/ServicesGrid'
@@ -78,6 +79,7 @@ export type TestimonialsProps = {
 export type Props = {
     Hero: HeroProps
     Stats: StatsProps
+    TelegramSpotlight: {}
     BentoGrid: BentoGridProps
     TrustedBy: TrustedByProps
     Services: ServicesProps
@@ -124,6 +126,9 @@ export const config: Config<Props> = {
                 secondaryCtaLink: '/case-studies',
             },
             render: (props) => <HomeHero {...props} />,
+        },
+        TelegramSpotlight: {
+            render: () => <TelegramSpotlightBlock />,
         },
         Stats: {
             fields: {
@@ -185,7 +190,8 @@ export const config: Config<Props> = {
                 ]
             },
             render: ({ title, subtitle, items }) => (
-                <section style={{ padding: '80px 20px', background: 'var(--bg-secondary)', borderTop: '1px solid var(--glass-border)' }}>
+                <section style={{ padding: '80px 20px', background: 'var(--bg-secondary)', borderTop: '1px solid var(--glass-border)', position: 'relative', overflow: 'hidden' }}>
+                    <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(88,28,255,0.08), transparent)' }} />
                     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '1rem', fontFamily: 'var(--font-playfair)', color: '#fff' }}>{title}</h2>
                         <p style={{ textAlign: 'center', color: '#94a3b8', marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem' }}>{subtitle}</p>
@@ -298,10 +304,10 @@ export const config: Config<Props> = {
         },
         ROICalculator: {
             render: () => (
-                <Section theme="light">
-                    <h2 style={{ textAlign: 'center', fontSize: '3.5rem', fontFamily: 'var(--font-playfair)', color: '#000', marginBottom: '1rem', lineHeight: 1 }}>Calculate Your Upside</h2>
-                    <p style={{ textAlign: 'center', color: '#475569', fontSize: '1.25rem', marginBottom: '3rem' }}>Don&apos;t guess. Use our proprietary models to project your automation ROI.</p>
-                    <div style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', padding: '3rem', borderRadius: '1.5rem', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.1)' }}>
+                <Section theme="dark">
+                    <h2 style={{ textAlign: 'center', fontSize: '3.5rem', fontFamily: 'var(--font-playfair)', color: '#fff', marginBottom: '1rem', lineHeight: 1 }}>Calculate Your Upside</h2>
+                    <p style={{ textAlign: 'center', color: '#94a3b8', fontSize: '1.25rem', marginBottom: '3rem' }}>Don&apos;t guess. Use our proprietary models to project your automation ROI.</p>
+                    <div style={{ maxWidth: '800px', margin: '0 auto', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', padding: '3rem', borderRadius: '1.5rem' }}>
                         <ROICalculator />
                     </div>
                 </Section>

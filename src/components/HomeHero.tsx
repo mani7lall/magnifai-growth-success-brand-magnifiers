@@ -24,6 +24,7 @@ export default function HomeHero({
 }: HomeHeroProps) {
     return (
         <section className={styles.heroSection}>
+            <div className={styles.meshGlow} />
             <div className={styles.heroContent}>
                 <div className={styles.badge}>
                     <Zap size={14} />

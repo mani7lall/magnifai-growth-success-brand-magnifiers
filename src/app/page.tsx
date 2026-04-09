@@ -261,7 +261,6 @@ export default async function Home() {
                 <main className={styles.main}>
                     <Render config={config} data={data.data} />
                 </main>
-                <TelegramSpotlight />
                 <Footer />
             </>
         );
