@@ -186,3 +186,306 @@ body::after {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* ========================================
+   SECTION DIFFERENTIATION & ANIMATIONS
+   ======================================== */
+
+/* Alternating Section Backgrounds */
+section:nth-of-type(even),
+[class*="Section"]:nth-of-type(even),
+[id*="section"]:nth-of-type(even) {
+  background: linear-gradient(180deg, rgba(139,92,246,0.02) 0%, rgba(99,102,241,0.02) 100%);
+  border-top: 1px solid rgba(139,92,246,0.08);
+  border-bottom: 1px solid rgba(139,92,246,0.08);
+}
+
+section:nth-of-type(odd),
+[class*="Section"]:nth-of-type(odd),
+[id*="section"]:nth-of-type(odd) {
+  background: transparent;
+}
+
+/* Glass Card Styles - Universal */
+.card,
+[class*="card"],
+[class*="Card"],
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+[class*="card"]::before,
+[class*="Card"]::before,
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139,92,246,0.1), transparent);
+  transition: left 0.6s;
+  pointer-events: none;
+}
+
+.card:hover,
+[class*="card"]:hover,
+[class*="Card"]:hover,
+.glass-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3),
+              0 0 0 1px rgba(139, 92, 246, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.card:hover::before,
+[class*="card"]:hover::before,
+[class*="Card"]:hover::before,
+.glass-card:hover::before {
+  left: 100%;
+}
+
+/* Animated Gradient Background on Hover */
+.card:hover {
+  background: linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(99,102,241,0.05) 100%);
+}
+
+/* Button Animations */
+button,
+.button,
+[role="button"],
+a.btn,
+a[class*="btn"],
+a[class*="button"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover,
+.button:hover,
+[role="button"]:hover,
+a.btn:hover,
+a[class*="btn"]:hover,
+a[class*="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+}
+
+button:active,
+.button:active,
+[role="button"]:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Apply animations to key elements */
+section,
+[class*="Section"] {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.2s; }
+section:nth-of-type(3) { animation-delay: 0.3s; }
+
+h1, h2, h3 {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.card,
+[class*="card"],
+[class*="Card"] {
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Light Mode Enhancements */
+html[data-theme='light'] .card,
+html[data-theme='light'] [class*="card"],
+html[data-theme='light'] [class*="Card"],
+html[data-theme='light'] .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='light'] .card:hover,
+html[data-theme='light'] [class*="card"]:hover,
+html[data-theme='light'] [class*="Card"]:hover,
+html[data-theme='light'] .glass-card:hover {
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2),
+              0 0 0 1px rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Light Mode Text Fixes */
+html[data-theme='light'] h1,
+html[data-theme='light'] h2,
+html[data-theme='light'] h3,
+html[data-theme='light'] h4,
+html[data-theme='light'] h5,
+html[data-theme='light'] h6 {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+html[data-theme='light'] p,
+html[data-theme='light'] span,
+html[data-theme='light'] div {
+  color: #1e293b;
+}
+
+html[data-theme='light'] .text-muted,
+html[data-theme='light'] [class*="muted"] {
+  color: #64748b !important;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6, #6366F1, #22D3EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  background-size: 200% 100%;
+}
+
+/* Pulse Animation for CTAs */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5),
+              0 0 60px rgba(99, 102, 241, 0.3);
+}
+
+/* Link Hover Effects */
+a:not(.btn):not([class*="button"]) {
+  position: relative;
+  transition: color 0.3s;
+}
+
+a:not(.btn):not([class*="button"])::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8B5CF6, #6366F1);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:not(.btn):not([class*="button"]):hover::after {
+  width: 100%;
+}
+
+/* Hero Section Enhancement */
+[class*="Hero"],
+[class*="hero"],
+section:first-of-type {
+  position: relative;
+  overflow: hidden;
+}
+
+[class*="Hero"]::before,
+[class*="hero"]::before,
+section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Performance Optimizations */
+.card,
+[class*="card"],
+[class*="Card"],
+button,
+.button {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
