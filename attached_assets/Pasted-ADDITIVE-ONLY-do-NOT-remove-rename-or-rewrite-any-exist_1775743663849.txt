@@ -1,0 +1,53 @@
+ADDITIVE ONLY — do NOT remove, rename, or rewrite any existing page, component, route, or file. Only CREATE new files or ADD new sections to existing ones. Preserve all Prismic, Puck, Telegram configs exactly. Use Tailwind CSS, match dark theme (dark navy/black bg, white text, blue/purple accents). All new pages need: answer-first SEO summary box, H1/H2/H3 hierarchy, FAQPage JSON-LD schema.
+
+Do these tasks in order:
+
+1. READ src/app/page.tsx first to understand its structure, then ADD these 6 new section components BELOW all existing content in page.tsx (import and append them before the closing tag):
+- src/components/HomeTrustBar/index.tsx: "Trusted by growth teams" + 5 company logo placeholder boxes + 3 metric pills: "200+ Projects", "4.9★ Rating", "12+ Industries"
+- src/components/HomeResourcesPreview/index.tsx: H2 "Free Resources for Growth Teams" + 6 resource cards grid (3-col desktop) with type badge, title, 1-line desc, "Explore →" link. Data from src/data/resources-preview.ts (create with 6 items covering: ROI Calculator, Growth Quiz, Website Audit Checklist, Tool Comparison Guide, AI Prompts Library, Growth Stack Guide)
+- src/components/HomeCalculatorTeaser/index.tsx: dark card, H2 "Calculate Your AI Marketing ROI", subtext, CTA button linking to /whatsapp-calculator, animated counter "₹4,20,000+ saved on average"
+- src/components/HomeGrowthStackTeaser/index.tsx: H2 "The Growth Stack We Use & Recommend", 4 tool mini-cards (CRM, Email, SEO, Automation), CTA linking to /growth-stack
+- src/components/HomeLeadMagnetBand/index.tsx: full-width blue gradient band, H2 "Get the 2026 Website Growth Audit Checklist — Free", email input + submit button with success state
+- src/components/HomeInsightsPreview/index.tsx: H2 "Latest Insights", 3 horizontal insight cards with category tag, title, excerpt, "Read →" link. Data from src/data/insights-preview.ts (create with 3 items)
+
+2. Create src/app/quiz/growth-readiness/page.tsx — interactive client component quiz:
+- Step 0: Splash "Find out exactly why your funnel isn't scaling" + Start button
+- Steps 1-5: one question per screen, progress bar at top, no navbar during quiz
+  - Q1: Primary growth bottleneck (Traffic/Conversions/Retention/All)
+  - Q2: Monthly website traffic (Under 1k/1k-10k/10k-50k/50k+)
+  - Q3: Current CRM (HubSpot/Salesforce/Zoho/None)
+  - Q4: Marketing team size (Solo/2-5/6-15/15+)
+  - Q5: Primary channel (SEO/Paid Ads/Social/Referral)
+- Step 6: Email gate (name + work email + "Get My Growth Report" button, mock submit shows success)
+- Results: score 0-100 in animated circle, "Your top 3 priorities", if score<50 show 3 affiliate tool cards with placeholder links, if score≥50 show "Book a Strategy Call" CTA. Dark theme, mobile-first.
+
+3. Upgrade src/app/growth-stack/page.tsx — ADD these sections if not present (do not remove existing):
+- H1 "The Exact Growth Stack WeMagnifAI Uses & Recommends"
+- Affiliate disclosure banner (amber)
+- Bento grid of 8 tools with: category badge, name, "Best for:", "Why we use it:" 2 sentences, "Try [Tool] Free →" button (placeholder affiliate link), "We implement this →" link to /contact
+- Data: src/data/growth-stack.ts with 8 tools (HubSpot CRM, Mailchimp, Ahrefs, Google Analytics, Make.com, Calendly, Notion, Hotjar)
+- "Starter Stack vs Pro Stack" two-column section
+- FAQ section 5 questions with schema-ready markup
+- Bottom CTA band: "Don't want to set this up? We implement the full stack in 14 days"
+
+4. Upgrade src/app/resources/page.tsx — ADD these sections:
+- H1 "Free Resources for Founders & Growth Teams"
+- Answer-first box (40 words)
+- 18-item resource cards grid from src/data/resources-full.ts (create file: mix of Guides, Templates, Calculators, Comparisons, Checklists, Case Studies)
+- Filter tabs: All/Guides/Templates/Calculators/Comparisons/Checklists
+- Newsletter inline signup mid-page
+- FAQ 4 items with schema
+
+5. Upgrade src/app/compare/page.tsx and create src/app/compare/[slug]/page.tsx:
+- Create src/data/tools-database.ts with 12 B2B SaaS tools (id, name, slug, category, tagline, pricing, pros[], cons[], bestFor, affiliateLink placeholder, rating, logoColor hex)
+- compare/page.tsx: H1 "B2B Tool Comparisons", answer box, grid of 10 comparison pair links, affiliate disclosure
+- compare/[slug]/page.tsx: parse "tool-a-vs-tool-b" slug, lookup both tools, render: direct answer box, side-by-side specs table, pros/cons, best-for scenarios, verdict, FAQ accordion 4 questions, dual CTA affiliate buttons, "Want us to implement?" CTA. Add FAQPage + SoftwareApplication JSON-LD, generateMetadata for SEO.
+
+6. Upgrade src/app/whatsapp-calculator/page.tsx — enhance with full ROI calculator:
+- If existing calculator is minimal, ADD an enhanced AI Marketing ROI Calculator section
+- 4 sliders: Monthly Ad Spend (₹1k-₹100k), Team Size (1-25), Avg Hourly Cost (₹1k-₹10k), Automation % (10-80)
+- 4 live output metrics: Annual Savings, Hours Saved/Month, Media Efficiency Gain, Labor Savings
+- Email capture gate below results (name + email + "Email me full report" button with mock success)
+- Dark theme, responsive, Tailwind only
+
+After all tasks: verify app still builds and runs. Do not change package.json dev script. Output a summary of all files created/edited.
