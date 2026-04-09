@@ -1,4 +1,5 @@
-export interface GrowthTool {
+34
+    export interface GrowthTool {
     id: string;
     name: string;
     category: string;
@@ -31,11 +32,11 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '🐵',
         bestFor: 'Small teams needing simple email automation without complexity',
         whyWeUseIt: 'The drag-and-drop editor and pre-built automations let clients send their first campaign in under an hour. Scales cleanly to 100k+ lists.',
-        affiliateLink: 'https://mailchimp.com/pricing/'
+        affiliateLink: 'https://mailchimp.com/pricing/',
         logoColor: '#FFE01B',
         pricing: 'Free → $350/mo',
         rating: 4.4,
-    },,
+    },
     {
         id: 'ahrefs',
         name: 'Ahrefs',
@@ -43,11 +44,11 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '🔍',
         bestFor: 'Content teams that want deep keyword research and competitor analysis',
         whyWeUseIt: "Ahrefs' Site Explorer gives us the clearest picture of a client's organic opportunity. We use it to build every content strategy from day one.",
-        affiliateLink: 'https://ahrefs.com/pricing'
+        affiliateLink: 'https://ahrefs.com/pricing',
         logoColor: '#FF5733',
         pricing: '$99 → $999/mo',
         rating: 4.9,
-    },,
+    },
     {
         id: 'google-analytics',
         name: 'Google Analytics 4',
