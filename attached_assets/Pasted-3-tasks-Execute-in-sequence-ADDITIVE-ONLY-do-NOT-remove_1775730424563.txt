@@ -1,0 +1,28 @@
+3 tasks. Execute in sequence. ADDITIVE ONLY — do NOT remove or rewrite any existing content, pages, or data files.
+
+=== TASK 1: MEGA-MENU NAVBAR ===
+Find the Navbar component file. Keep logo, theme toggle, login, Submit Tool buttons exactly. Replace only the nav links section.
+
+Build a Stripe-style mega-menu (client component, use client). Desktop: hovering a nav item opens a contained dropdown panel (max-w 700px, positioned below item). Mobile: hamburger + accordion.
+
+NEW NAV: 1) SOLUTIONS dropdown - Col1 Services: Brand Strategy->/services/brand-strategy, Website Growth->/services/development, AI Automation->/services/ai-automation, Content & SEO->/services/marketing, Conversion Systems->/services/creative. Col2 By Industry: SaaS & Tech->/industries, Startups->/industries, E-commerce->/industries, Agencies->/industries, Professional Services->/industries. Bottom CTA: Talk to our team -> /contact. 2) RESOURCES dropdown - Col1 Learn: Resource Hub->/resources, Playbooks->/playbooks, Glossary->/glossary, Insights->/insights, Blog->/blog. Col2 Tools & Templates: ROI Calculator->/tools/roi, AI Readiness Quiz->/tools/readiness-quiz, Growth Stack->/growth-stack, AI Templates->/ai-templates, Comparisons->/compare. Bottom CTA: Browse all resources -> /resources. 3) COMPARE dropdown - single column, label: Unbiased tool comparisons for B2B teams. Links: HubSpot vs Pipedrive->/compare/hubspot-vs-pipedrive, Notion vs Airtable->/compare/notion-vs-airtable, Webflow vs WordPress->/compare/webflow-vs-wordpress, View all->/compare. 4) FREE TOOLS -> /free-audit (keep). 5) AGENCY -> /agency (keep).
+
+Dropdown styles: bg rgba(10,10,20,0.97) blur(20px), border 1px solid rgba(139,92,246,0.25), borderRadius 12px, boxShadow 0 20px 60px rgba(0,0,0,0.6). Column headings: uppercase 11px letterSpacing 0.12em color #8B5CF6. Links: 14px color #CBD5E1 hover color #A78BFA. Fade+slide 200ms animation. Close on Escape or click outside.
+
+=== TASK 2: COLOR SYSTEM ===
+Find globals.css. ADD these CSS vars inside :root (do not remove existing):
+--accent-primary:#8B5CF6; --accent-secondary:#6366F1; --accent-glow:#A78BFA; --accent-cyan:#22D3EE; --accent-pink:#EC4899; --gradient-hero:linear-gradient(135deg,#8B5CF6 0%,#6366F1 50%,#22D3EE 100%); --gradient-card:linear-gradient(135deg,rgba(139,92,246,0.1) 0%,rgba(99,102,241,0.05) 100%); --border-accent:rgba(139,92,246,0.25); --glow-violet:0 0 30px rgba(139,92,246,0.3);
+Also: change any existing green Free Tools nav label color (like #10B981) to #22D3EE. Add scroll-behavior:smooth to html. Update primary .btn or button CTA classes to use violet gradient bg and violet glow box-shadow.
+
+=== TASK 3: 3 NEW HOMEPAGE SECTIONS ===
+Open src/app/page.tsx. Find where the Services section ends. AFTER it, BEFORE the calculator section, insert these 3 JSX sections:
+
+Section A - Resource Hub Preview: Label 'RESOURCE HUB', H2 'Everything You Need to Grow' with gradient text (var(--gradient-hero) background-clip text), subtext 'Guides, templates, calculators — all free.'. 3 resource cards in responsive grid: {emoji:'📖', label:'PLAYBOOK', title:'B2B Growth System 2026', href:'/playbooks/b2b-growth-system-2026'}, {emoji:'📊', label:'CALCULATOR', title:'Growth ROI Calculator', href:'/tools/roi'}, {emoji:'⚡', label:'GUIDE', title:'AI Search Optimization 2026', href:'/playbooks/ai-search-optimization-guide'}. Cards: bg var(--gradient-card), border 1px solid var(--border-accent), borderRadius 12px, p-7. Bottom: Browse All Resources link -> /resources, color var(--accent-glow).
+
+Section B - Growth Stack Teaser: bg rgba(139,92,246,0.04), borderTop+borderBottom 1px solid var(--border-accent). Left side: label 'GROWTH STACK', H2 'Tools We Actually Use', p '24 battle-tested tools across 8 categories.', CTA button 'Explore Growth Stack' -> /growth-stack, bg var(--accent-primary). Right side: pill tags for HubSpot, Ahrefs, Make.com, ConvertKit, Hotjar, Claude, Figma, Calendly — each pill: bg rgba(139,92,246,0.1) border var(--border-accent) color #C4B5FD borderRadius 999px px-4 py-2.
+
+Section C - Lead Magnet CTA Band: bg linear-gradient(135deg,rgba(139,92,246,0.15),rgba(34,211,238,0.08)), centered. Label 'FREE DOWNLOAD', H2 'Website Growth Audit Checklist' large white bold, p 'The exact 47-point checklist used before every client engagement. 2,400+ downloads.', CTA 'Download Free' -> /lead-magnets/website-audit-checklist, bg linear-gradient(135deg,#8B5CF6,#22D3EE), boxShadow 0 8px 32px rgba(139,92,246,0.4).
+
+Also find the Footer component. Under PRODUCT column add: Growth Stack->/growth-stack, Comparisons->/compare. Under FREE TOOLS column add: ROI Calculator->/tools/roi, Glossary->/glossary.
+
+After all 3 tasks: restart app, confirm GET / = 200, list all files changed.
