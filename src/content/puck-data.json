@@ -17,22 +17,10 @@
       "type": "Stats",
       "props": {
         "items": [
-          {
-            "value": "500+",
-            "label": "Happy Clients"
-          },
-          {
-            "value": "$2M+",
-            "label": "Revenue Generated"
-          },
-          {
-            "value": "50+",
-            "label": "AI Automations"
-          },
-          {
-            "value": "98%",
-            "label": "Client Retention"
-          }
+          { "value": "500+", "label": "Happy Clients" },
+          { "value": "$2M+", "label": "Revenue Generated" },
+          { "value": "50+", "label": "AI Automations" },
+          { "value": "98%", "label": "Client Retention" }
         ],
         "id": "stats-1"
       }
@@ -42,51 +30,33 @@
       "props": {
         "title": "Trusted by teams automating the future",
         "companies": [
-          {
-            "name": "TechCorp"
-          },
-          {
-            "name": "DataFlow"
-          },
-          {
-            "name": "AI Ventures"
-          },
-          {
-            "name": "Nebula Systems"
-          },
-          {
-            "name": "Vertex"
-          },
-          {
-            "name": "DeepMindz"
-          },
-          {
-            "name": "SynthLabs"
-          },
-          {
-            "name": "Quantum AI"
-          }
+          { "name": "TechCorp" },
+          { "name": "DataFlow" },
+          { "name": "AI Ventures" },
+          { "name": "Nebula Systems" },
+          { "name": "Vertex" },
+          { "name": "DeepMindz" },
+          { "name": "SynthLabs" },
+          { "name": "Quantum AI" }
         ],
         "id": "trusted-by-1"
       }
     },
     {
+      "type": "TelegramTeaser",
+      "props": { "id": "telegram-teaser-1" }
+    },
+    {
       "type": "ProblemSection",
-      "props": {
-        "id": "problem-1"
-      }
+      "props": { "id": "problem-1" }
     },
     {
       "type": "BookingWidget",
-      "props": {
-        "id": "booking-widget-1"
-      }
+      "props": { "id": "booking-widget-1" }
     },
     {
       "type": "ValueProp",
-      "props": {
-        "id": "value-prop-1"
-      }
+      "props": { "id": "value-prop-1" }
     },
     {
       "type": "BentoGrid",
@@ -94,46 +64,24 @@
         "title": "System Architecture",
         "subtitle": "A modular, scalable ecosystem designed for complete market dominance.",
         "items": [
-          {
-            "title": "AI Agents Swarm",
-            "description": "Autonomous agents that handle outreach 24/7.",
-            "iconName": "Bot",
-            "span": 2
-          },
-          {
-            "title": "Visual Intelligence",
-            "description": "Generative UI adapting in real-time.",
-            "iconName": "Zap",
-            "span": 1
-          },
-          {
-            "title": "Global CDN",
-            "description": "Edge-deployed content delivery.",
-            "iconName": "Globe",
-            "span": 1
-          }
+          { "title": "AI Agents Swarm", "description": "Autonomous agents that handle outreach 24/7.", "iconName": "Bot", "span": 2 },
+          { "title": "Visual Intelligence", "description": "Generative UI adapting in real-time.", "iconName": "Zap", "span": 1 },
+          { "title": "Global CDN", "description": "Edge-deployed content delivery.", "iconName": "Globe", "span": 1 }
         ],
         "id": "bento-1"
       }
     },
     {
       "type": "InlineCTA",
-      "props": {
-        "variant": "newsletter",
-        "id": "inline-cta-green-1"
-      }
+      "props": { "variant": "newsletter", "id": "inline-cta-green-1" }
     },
     {
       "type": "PromptCarousel",
-      "props": {
-        "id": "prompt-carousel-1"
-      }
+      "props": { "id": "prompt-carousel-1" }
     },
     {
       "type": "LeadMagnet",
-      "props": {
-        "id": "lead-magnet-1"
-      }
+      "props": { "id": "lead-magnet-1" }
     },
     {
       "type": "Services",
@@ -142,130 +90,61 @@
         "title": "Services Built for Growth",
         "subtitle": "Full-stack creative and technical solutions to help you dominate your market.",
         "items": [
-          {
-            "title": "Creative Design",
-            "description": "Brand identity, UI/UX design, and visual storytelling that captivates your audience.",
-            "iconName": "Palette",
-            "href": "/services/creative"
-          },
-          {
-            "title": "Digital Marketing",
-            "description": "SEO, paid ads, and content strategies that drive traffic and conversions.",
-            "iconName": "Megaphone",
-            "href": "/services/marketing"
-          },
-          {
-            "title": "AI Automation",
-            "description": "Custom AI agents and workflows that run your operations 24/7.",
-            "iconName": "Bot",
-            "href": "/services/ai-automation"
-          },
-          {
-            "title": "Web Development",
-            "description": "Fast, scalable websites and apps built with modern technology.",
-            "iconName": "Code",
-            "href": "/services/development"
-          },
-          {
-            "title": "SEO Optimization",
-            "description": "Data-driven strategies to rank #1 and dominate search intent.",
-            "iconName": "Globe",
-            "href": "/services/seo"
-          },
-          {
-            "title": "Content Strategy",
-            "description": "High-impact content systems that build authority and trust at scale.",
-            "iconName": "Megaphone",
-            "href": "/services/content"
-          },
-          {
-            "title": "E-commerce Scaling",
-            "description": "Conversion rate optimization and platform migration for online stores.",
-            "iconName": "Database",
-            "href": "/services/ecommerce"
-          },
-          {
-            "title": "Brand Identity",
-            "description": "Comprehensive visual systems that define your market positioning.",
-            "iconName": "Palette",
-            "href": "/services/branding"
-          }
+          { "title": "Creative Design", "description": "Brand identity, UI/UX design, and visual storytelling that captivates your audience.", "iconName": "Palette", "href": "/services/creative" },
+          { "title": "Digital Marketing", "description": "SEO, paid ads, and content strategies that drive traffic and conversions.", "iconName": "Megaphone", "href": "/services/marketing" },
+          { "title": "AI Automation", "description": "Custom AI agents and workflows that run your operations 24/7.", "iconName": "Bot", "href": "/services/ai-automation" },
+          { "title": "Web Development", "description": "Fast, scalable websites and apps built with modern technology.", "iconName": "Code", "href": "/services/development" },
+          { "title": "SEO Optimization", "description": "Data-driven strategies to rank #1 and dominate search intent.", "iconName": "Globe", "href": "/services/seo" },
+          { "title": "Content Strategy", "description": "High-impact content systems that build authority and trust at scale.", "iconName": "Megaphone", "href": "/services/content" },
+          { "title": "E-commerce Scaling", "description": "Conversion rate optimization and platform migration for online stores.", "iconName": "Database", "href": "/services/ecommerce" },
+          { "title": "Brand Identity", "description": "Comprehensive visual systems that define your market positioning.", "iconName": "Palette", "href": "/services/branding" }
         ],
         "id": "services-1"
       }
     },
     {
       "type": "ROICalculator",
-      "props": {
-        "id": "roi-calculator-1"
-      }
+      "props": { "id": "roi-calculator-1" }
     },
     {
       "type": "IntelligenceBrief",
-      "props": {
-        "id": "intel-brief-1"
-      }
+      "props": { "id": "intel-brief-1" }
     },
     {
       "type": "ResourceFeed",
-      "props": {
-        "id": "resource-feed-1"
-      }
+      "props": { "id": "resource-feed-1" }
     },
     {
       "type": "MagazineGrid",
-      "props": {
-        "id": "magazine-1"
-      }
+      "props": { "id": "magazine-1" }
     },
     {
       "type": "InlineCTA",
-      "props": {
-        "variant": "consultation",
-        "id": "inline-cta-pink-1"
-      }
+      "props": { "variant": "consultation", "id": "inline-cta-pink-1" }
     },
     {
       "type": "AIQuiz",
-      "props": {
-        "id": "ai-quiz-1"
-      }
+      "props": { "id": "ai-quiz-1" }
     },
     {
       "type": "Testimonials",
       "props": {
         "title": "Success Stories",
         "reviews": [
-          {
-            "text": "The ROI calculator alone saved us 40 hours of implementation time. The gated content is gold.",
-            "name": "Sarah Jenkins",
-            "role": "CTO at TechFlow"
-          },
-          {
-            "text": "WeMagnifAI is the only agency I trust. Their 'Agency Grade' results are a game changer.",
-            "name": "Mike Ross",
-            "role": "Founder, ScaleAI"
-          },
-          {
-            "text": "Detailed breakdowns and actual code snippets in the paid reports. Worth every penny.",
-            "name": "Elena K.",
-            "role": "Lead Engineer"
-          }
+          { "text": "The ROI calculator alone saved us 40 hours of implementation time. The gated content is gold.", "name": "Sarah Jenkins", "role": "CTO at TechFlow" },
+          { "text": "WeMagnifAI is the only agency I trust. Their 'Agency Grade' results are a game changer.", "name": "Mike Ross", "role": "Founder, ScaleAI" },
+          { "text": "Detailed breakdowns and actual code snippets in the paid reports. Worth every penny.", "name": "Elena K.", "role": "Lead Engineer" }
         ],
         "id": "testimonials-1"
       }
     },
     {
       "type": "FAQ",
-      "props": {
-        "id": "faq-1"
-      }
+      "props": { "id": "faq-1" }
     },
     {
       "type": "LeadCapture",
-      "props": {
-        "id": "lead-capture-1"
-      }
+      "props": { "id": "lead-capture-1" }
     }
   ],
   "root": {}
