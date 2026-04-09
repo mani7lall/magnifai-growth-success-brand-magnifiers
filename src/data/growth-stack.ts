@@ -19,7 +19,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '🟠',
         bestFor: 'Growing teams that want CRM + marketing + sales in one platform',
         whyWeUseIt: 'We have deployed HubSpot across 40+ client accounts. The free tier is genuinely powerful and the native integrations save weeks of setup time.',
-        affiliateLink: 'https://www.hubspot.com/products/crm'
+        affiliateLink: 'https://www.hubspot.com/products/crm',
         logoColor: '#FF7A59',
         pricing: 'Free → $800/mo',
         rating: 4.8,
@@ -35,7 +35,7 @@ export const growthStackTools: GrowthTool[] = [
         logoColor: '#FFE01B',
         pricing: 'Free → $350/mo',
         rating: 4.4,
-    },
+    },,
     {
         id: 'ahrefs',
         name: 'Ahrefs',
@@ -47,7 +47,7 @@ export const growthStackTools: GrowthTool[] = [
         logoColor: '#FF5733',
         pricing: '$99 → $999/mo',
         rating: 4.9,
-    },
+    },,
     {
         id: 'google-analytics',
         name: 'Google Analytics 4',
@@ -55,7 +55,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '📊',
         bestFor: 'Any business that wants to understand what drives conversions',
         whyWeUseIt: 'GA4 is non-negotiable in every stack we build. The event-based model and BigQuery export give us data that informs every campaign decision.',
-        affiliateLink: 'https://analytics.google.com/'
+        affiliateLink: 'https://analytics.google.com/',
         logoColor: '#E8710A',
         pricing: 'Free',
         rating: 4.5,
@@ -67,7 +67,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '⚙️',
         bestFor: 'Teams that want Zapier-level automation at a fraction of the cost',
         whyWeUseIt: "Make's visual canvas makes complex multi-step automations easy to build and debug. We use it for lead routing, CRM sync, and content pipelines.",
-        affiliateLink: 'https://www.make.com/en/register?pc=comet'
+        affiliateLink: 'https://www.make.com/en/register?pc=comet',
         logoColor: '#6D00CC',
         pricing: 'Free → $299/mo',
         rating: 4.7,
@@ -79,7 +79,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '📅',
         bestFor: 'Sales teams and consultants who need frictionless meeting booking',
         whyWeUseIt: 'Calendly eliminates the back-and-forth that kills conversion. Embedded on proposal pages, it typically increases booking rates by 30–40%.',
-        affiliateLink: 'https://calendly.com/'
+        affiliateLink: 'https://calendly.com/',
         logoColor: '#006BFF',
         pricing: 'Free → $16/mo',
         rating: 4.6,
@@ -91,7 +91,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '⬜',
         bestFor: 'Teams that want a single source of truth for docs, wikis, and projects',
         whyWeUseIt: 'We run our entire agency on Notion — client portals, SOPs, content calendars, and project tracking. The AI features now make it even more powerful.',
-        affiliateLink: 'https://www.notion.so/product'
+        affiliateLink: 'https://www.notion.so/product',
         logoColor: '#000000',
         pricing: 'Free → $16/mo',
         rating: 4.7,
@@ -103,7 +103,7 @@ export const growthStackTools: GrowthTool[] = [
         emoji: '🔥',
         bestFor: 'CRO teams that want to see exactly where users drop off',
         whyWeUseIt: "Hotjar's heatmaps and session recordings surface UX problems that analytics can't show. It's the first tool we install on every new client website.",
-        affiliateLink: 'https://www.hotjar.com/pricing/'
+        affiliateLink: 'https://www.hotjar.com/pricing/',
         logoColor: '#FD3A5C',
         pricing: 'Free → $80/mo',
         rating: 4.5,
