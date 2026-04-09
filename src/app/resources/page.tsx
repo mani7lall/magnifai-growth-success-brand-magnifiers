@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import NewsletterInline from '@/components/NewsletterInline';
 import { resources, featuredResources, categories } from '@/content/resources-data';
 import type { ResourceCategory } from '@/content/resources-data';
 import { generateFAQSchema, generateBreadcrumbSchema, generateOrganizationSchema } from '@/lib/schema';
@@ -159,6 +160,33 @@ export default function ResourcesHub() {
                                 </Link>
                             ))}
                         </div>
+                    </div>
+                </section>
+
+                {/* NEWSLETTER INLINE SIGNUP */}
+                <section style={{
+                    padding: '3.5rem 2rem',
+                    background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #0c0a1a 100%)',
+                    borderTop: '1px solid rgba(99,102,241,0.15)',
+                    borderBottom: '1px solid rgba(99,102,241,0.15)',
+                }}>
+                    <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+                        <p style={{
+                            color: '#818cf8', fontSize: '0.8rem', fontWeight: 800,
+                            textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem',
+                        }}>
+                            New Resources Weekly
+                        </p>
+                        <h2 style={{
+                            color: '#fff', fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+                            fontFamily: 'var(--font-playfair)', fontWeight: 900, margin: '0 0 0.75rem',
+                        }}>
+                            Get New Resources Delivered to Your Inbox
+                        </h2>
+                        <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.65, margin: '0 0 1.75rem' }}>
+                            New guides, templates, and calculators added every two weeks. No spam.
+                        </p>
+                        <NewsletterInline />
                     </div>
                 </section>
 

@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LeadCaptureModal from '@/components/LeadCaptureModal';
+import AIROICalculator from '@/components/AIROICalculator';
 import styles from './page.module.css';
 import {
     MessageCircle,
@@ -425,6 +426,9 @@ export default function WhatsAppCalculatorPage() {
                         )}
                     </div>
                 )}
+
+                {/* AI ROI CALCULATOR */}
+                <AIROICalculator />
 
                 {/* Lead Capture Modal */}
                 <LeadCaptureModal

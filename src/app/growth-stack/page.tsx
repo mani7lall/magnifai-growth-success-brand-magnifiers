@@ -287,6 +287,99 @@ export default function GrowthStackPage() {
                     </div>
                 </section>
 
+                {/* STARTER vs PRO STACK */}
+                <section style={{ padding: '5rem 2rem', borderTop: '1px solid var(--glass-border)' }}>
+                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                        <h2 style={{
+                            fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+                            fontFamily: 'var(--font-playfair)',
+                            color: '#fff', textAlign: 'center', marginBottom: '0.75rem',
+                        }}>
+                            Starter Stack vs Pro Stack
+                        </h2>
+                        <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '3rem', fontSize: '1.05rem' }}>
+                            Not every team needs the full toolkit from day one. Here&apos;s how to start lean and upgrade as you scale.
+                        </p>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                            {[
+                                {
+                                    label: 'Starter Stack', emoji: '🌱', color: '#10b981',
+                                    desc: 'For solo founders and early-stage teams (0–$1M ARR)',
+                                    tools: ['HubSpot CRM (Free)', 'Mailchimp (Free)', 'Google Analytics 4 (Free)', 'Calendly (Free)'],
+                                    budget: '£0/mo',
+                                },
+                                {
+                                    label: 'Pro Stack', emoji: '🚀', color: '#6366f1',
+                                    desc: 'For scaling teams ready to invest in growth infrastructure',
+                                    tools: ['HubSpot Pro', 'Klaviyo', 'Ahrefs', 'GA4 + BigQuery', 'Make.com', 'Hotjar', 'Notion', 'Calendly Pro'],
+                                    budget: '£400–800/mo',
+                                },
+                            ].map(stack => (
+                                <div key={stack.label} style={{
+                                    background: 'var(--bg-secondary)',
+                                    border: `1px solid ${stack.color}30`,
+                                    borderRadius: '1.25rem', padding: '2rem',
+                                }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                                        <span style={{ fontSize: '1.75rem' }}>{stack.emoji}</span>
+                                        <div>
+                                            <h3 style={{ color: '#fff', fontWeight: 800, margin: 0, fontSize: '1.15rem' }}>{stack.label}</h3>
+                                            <span style={{
+                                                background: `${stack.color}15`, color: stack.color,
+                                                border: `1px solid ${stack.color}30`,
+                                                fontSize: '0.7rem', fontWeight: 700,
+                                                padding: '0.15rem 0.6rem', borderRadius: '9999px',
+                                            }}>{stack.budget}</span>
+                                        </div>
+                                    </div>
+                                    <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>{stack.desc}</p>
+                                    <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                        {stack.tools.map(t => (
+                                            <li key={t} style={{ color: '#cbd5e1', fontSize: '0.9rem', lineHeight: 1.5 }}>{t}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* FAQ */}
+                <section style={{ padding: '4rem 2rem', borderTop: '1px solid var(--glass-border)', background: 'var(--bg-secondary)' }}>
+                    <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+                        <h2 style={{
+                            fontSize: '2rem', fontFamily: 'var(--font-playfair)',
+                            color: '#fff', textAlign: 'center', marginBottom: '2.5rem',
+                        }}>
+                            Frequently Asked Questions
+                        </h2>
+                        {[
+                            { q: 'Are these affiliate links?', a: 'Some are. We earn a small commission on selected tools at no extra cost to you. We only list tools we genuinely use and recommend across client accounts — no paid placements.' },
+                            { q: 'How long does stack implementation take?', a: 'Our typical full-stack implementation takes 10–14 business days, covering CRM setup, automation workflows, analytics configuration, and team training.' },
+                            { q: 'Do I need all these tools?', a: 'No. Start with the Starter Stack (all free tools) and upgrade as you grow. We help clients prioritise based on their biggest current bottleneck.' },
+                            { q: 'Will you implement tools not on this list?', a: "Absolutely. This is our default stack — we're tool-agnostic and will work with whatever your team already uses, or recommend the best fit for your specific use case." },
+                            { q: 'What support do you provide post-implementation?', a: 'Every implementation includes a 30-day support window and a recorded walkthrough for your team. Ongoing support is available via our retainer packages.' },
+                        ].map((faq, i) => (
+                            <details key={i} style={{
+                                background: 'var(--bg-tertiary)',
+                                border: '1px solid var(--glass-border)',
+                                borderRadius: '1rem', padding: '1.25rem',
+                                marginBottom: '0.75rem',
+                            }}>
+                                <summary style={{
+                                    color: '#fff', fontWeight: 700, cursor: 'pointer',
+                                    fontSize: '0.975rem', listStyle: 'none',
+                                    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                                }}>
+                                    {faq.q}
+                                    <span style={{ color: '#475569', fontSize: '1.25rem', fontWeight: 400 }}>+</span>
+                                </summary>
+                                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0.85rem 0 0' }}>{faq.a}</p>
+                            </details>
+                        ))}
+                    </div>
+                </section>
+
                 {/* BOTTOM CTA */}
                 <section style={{
                     padding: '5rem 2rem', textAlign: 'center',
@@ -299,10 +392,10 @@ export default function GrowthStackPage() {
                             fontSize: '2.25rem', fontFamily: 'var(--font-playfair)',
                             color: '#fff', marginBottom: '1rem',
                         }}>
-                            Want Us to Set This Up for You?
+                            Don't Want to Set This Up?<br />We Implement the Full Stack in 14 Days
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-                            We don't just recommend these tools — we implement them. From CRM configuration to automation workflows to analytics setup, we build your full growth stack end to end.
+                            From CRM configuration to automation workflows to analytics setup — we build your complete growth stack end to end, then hand it over with full training.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                             <Link href="/free-audit" style={{
