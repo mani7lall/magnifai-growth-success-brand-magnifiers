@@ -14,12 +14,6 @@
       }
     },
     {
-      "type": "TelegramSpotlight",
-      "props": {
-        "id": "telegram-spotlight-1"
-      }
-    },
-    {
       "type": "Stats",
       "props": {
         "items": [
