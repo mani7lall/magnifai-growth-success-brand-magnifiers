@@ -4,6 +4,19 @@ import Link from 'next/link';
 import { comparisons } from '@/content/comparisons-data';
 import type { Metadata } from 'next';
 
+const PAIR_LINKS = [
+    { a: 'HubSpot', b: 'Pipedrive', slug: 'hubspot-vs-pipedrive', category: 'CRM', aEmoji: '🟠', bEmoji: '🟢' },
+    { a: 'Notion', b: 'Airtable', slug: 'notion-vs-airtable', category: 'Productivity', aEmoji: '⬜', bEmoji: '🟡' },
+    { a: 'Webflow', b: 'WordPress', slug: 'webflow-vs-wordpress', category: 'Website', aEmoji: '🔵', bEmoji: '🅦' },
+    { a: 'Klaviyo', b: 'Mailchimp', slug: 'klaviyo-vs-mailchimp', category: 'Email', aEmoji: '📧', bEmoji: '🐵' },
+    { a: 'Make.com', b: 'Zapier', slug: 'make-vs-zapier', category: 'Automation', aEmoji: '⚙️', bEmoji: '⚡' },
+    { a: 'Ahrefs', b: 'SEMrush', slug: 'ahrefs-vs-semrush', category: 'SEO', aEmoji: '🔍', bEmoji: '🟠' },
+    { a: 'HubSpot', b: 'Mailchimp', slug: 'hubspot-vs-mailchimp', category: 'Email + CRM', aEmoji: '🟠', bEmoji: '🐵' },
+    { a: 'Notion', b: 'HubSpot', slug: 'notion-vs-hubspot', category: 'Productivity vs CRM', aEmoji: '⬜', bEmoji: '🟠' },
+    { a: 'Make.com', b: 'HubSpot', slug: 'make-vs-hubspot', category: 'Automation', aEmoji: '⚙️', bEmoji: '🟠' },
+    { a: 'Ahrefs', b: 'Google Analytics', slug: 'ahrefs-vs-google-analytics', category: 'Analytics', aEmoji: '🔍', bEmoji: '📊' },
+];
+
 export const metadata: Metadata = {
     title: 'Tool Comparisons — Unbiased Reviews for B2B Teams | WeMagnifAI',
     description: 'In-depth, unbiased comparisons of the most popular B2B tools. CRM, design, productivity, and website platforms — find the right tool for your team.',
@@ -49,8 +62,77 @@ export default function ComparePage() {
                     </div>
                 </section>
 
+                {/* AFFILIATE DISCLOSURE */}
+                <div style={{
+                    background: 'rgba(245,158,11,0.07)',
+                    borderBottom: '1px solid rgba(245,158,11,0.18)',
+                    padding: '0.65rem 2rem',
+                    textAlign: 'center',
+                }}>
+                    <p style={{ color: '#fbbf24', fontSize: '0.82rem', margin: 0 }}>
+                        <strong>Disclosure:</strong> Some comparison pages contain affiliate links. We earn a small commission at no extra cost to you if you click through and purchase. All opinions are our own.
+                    </p>
+                </div>
+
+                {/* ANSWER-FIRST BOX */}
+                <section style={{ padding: '3rem 2rem 0' }}>
+                    <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+                        <div style={{
+                            background: 'rgba(99,102,241,0.06)',
+                            border: '1px solid rgba(99,102,241,0.2)',
+                            borderRadius: '1rem', padding: '1.5rem',
+                        }}>
+                            <p style={{ color: '#818cf8', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
+                                Quick Answer
+                            </p>
+                            <p style={{ color: '#cbd5e1', lineHeight: 1.7, margin: 0, fontSize: '0.95rem' }}>
+                                Each comparison below goes deep on features, pricing, pros/cons, and real-world verdict — based on our experience implementing these tools across 40+ client accounts. Use the grid to jump to the comparison you need.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 10 COMPARISON PAIR LINKS */}
+                <section style={{ padding: '3rem 2rem' }}>
+                    <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+                        <h2 style={{
+                            color: '#fff', fontSize: '1.25rem', fontWeight: 800,
+                            marginBottom: '1.5rem', fontFamily: 'var(--font-playfair)',
+                        }}>
+                            All Comparisons
+                        </h2>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                            gap: '0.85rem',
+                        }}>
+                            {PAIR_LINKS.map(pair => (
+                                <Link key={pair.slug} href={`/compare/${pair.slug}`} style={{
+                                    display: 'flex', flexDirection: 'column', gap: '0.5rem',
+                                    textDecoration: 'none',
+                                    background: 'var(--bg-secondary)',
+                                    border: '1px solid var(--glass-border)',
+                                    borderRadius: '1rem', padding: '1.1rem',
+                                    transition: 'border-color 0.2s',
+                                }}>
+                                    <span style={{ color: '#64748b', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{pair.category}</span>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                        <span style={{ fontSize: '1.25rem' }}>{pair.aEmoji}</span>
+                                        <span style={{ color: '#475569', fontWeight: 800, fontSize: '0.75rem' }}>VS</span>
+                                        <span style={{ fontSize: '1.25rem' }}>{pair.bEmoji}</span>
+                                    </div>
+                                    <p style={{ color: '#e2e8f0', fontWeight: 700, fontSize: '0.875rem', margin: 0, lineHeight: 1.3 }}>
+                                        {pair.a} vs {pair.b}
+                                    </p>
+                                    <span style={{ color: '#6366f1', fontSize: '0.8rem', fontWeight: 700 }}>Compare →</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* COMPARISONS GRID */}
-                <section style={{ padding: '5rem 2rem' }}>
+                <section style={{ padding: '0 2rem 5rem' }}>
                     <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                         <div style={{
                             display: 'grid',
