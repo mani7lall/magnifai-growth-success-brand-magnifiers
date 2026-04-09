@@ -26,8 +26,7 @@ export const tools: Tool[] = [
         bestFor: 'Growing teams wanting an all-in-one platform',
         whyWeRecommend: 'We have deployed HubSpot across 40+ client accounts. The native integrations, reporting, and ease of onboarding make it the default choice for teams under 200 people.',
         category: 'CRM',
-        affiliateUrl: '#',
-        accentColor: '#FF7A59',
+    affiliateUrl: 'https://www.hubspot.com/products/get-started',        accentColor: '#FF7A59',
         implementationCta: 'Get HubSpot set up for you',
     },
     {
@@ -40,8 +39,7 @@ export const tools: Tool[] = [
         bestFor: 'Sales-focused SMBs who want pipeline clarity',
         whyWeRecommend: 'When a client\'s primary goal is managing a high-volume sales pipeline rather than marketing automation, Pipedrive wins every time on simplicity and value.',
         category: 'CRM',
-        affiliateUrl: '#',
-        accentColor: '#00C85C',
+    affiliateUrl: 'https://www.pipedrive.com/en/register',        accentColor: '#00C85C',
         implementationCta: 'Get Pipedrive configured for your team',
     },
     {
@@ -58,8 +56,7 @@ export const tools: Tool[] = [
         accentColor: '#1B6AC9',
         implementationCta: 'Have us build your SEO strategy with Ahrefs',
     },
-    {
-        id: 'semrush',
+    affiliateUrl: 'https://ahrefs.com/trial',        id: 'semrush',
         name: 'Semrush',
         emoji: '🟡',
         initials: 'SR',
@@ -72,8 +69,7 @@ export const tools: Tool[] = [
         accentColor: '#FF642D',
         implementationCta: 'Let us run your agency SEO on Semrush',
     },
-    {
-        id: 'surfer-seo',
+    affiliateUrl: 'https://www.semrush.com/lp/sem/en/',        id: 'surfer-seo',
         name: 'Surfer SEO',
         emoji: '🌊',
         initials: 'SF',
@@ -86,8 +82,7 @@ export const tools: Tool[] = [
         accentColor: '#7B68EE',
         implementationCta: 'Get Surfer integrated into your content workflow',
     },
-    {
-        id: 'mailchimp',
+    affiliateUrl: 'https://surferseo.com/',        id: 'mailchimp',
         name: 'Mailchimp',
         emoji: '🐒',
         initials: 'MC',
@@ -100,8 +95,7 @@ export const tools: Tool[] = [
         accentColor: '#FFE01B',
         implementationCta: 'Get your first email sequence built',
     },
-    {
-        id: 'convertkit',
+    affiliateUrl: 'https://mailchimp.com/pricing/',        id: 'convertkit',
         name: 'ConvertKit',
         emoji: '✉️',
         initials: 'CK',
@@ -114,8 +108,7 @@ export const tools: Tool[] = [
         accentColor: '#FB6970',
         implementationCta: 'Get your ConvertKit funnel built',
     },
-    {
-        id: 'klaviyo',
+    affiliateUrl: 'https://convertkit.com/pricing',        id: 'klaviyo',
         name: 'Klaviyo',
         emoji: '🟣',
         initials: 'KL',
@@ -128,8 +121,7 @@ export const tools: Tool[] = [
         accentColor: '#5E4CE6',
         implementationCta: 'Get your Klaviyo flows configured',
     },
-    {
-        id: 'google-analytics-4',
+    affiliateUrl: 'https://www.klaviyo.com/pricing',        id: 'google-analytics-4',
         name: 'Google Analytics 4',
         emoji: '📊',
         initials: 'GA',
@@ -142,8 +134,7 @@ export const tools: Tool[] = [
         accentColor: '#E37400',
         implementationCta: 'Get GA4 configured properly for your site',
     },
-    {
-        id: 'hotjar',
+    affiliateUrl: 'https://analytics.google.com/',        id: 'hotjar',
         name: 'Hotjar',
         emoji: '🔥',
         initials: 'HJ',
@@ -156,8 +147,7 @@ export const tools: Tool[] = [
         accentColor: '#FD3A5C',
         implementationCta: 'Get Hotjar set up for CRO research',
     },
-    {
-        id: 'mixpanel',
+    affiliateUrl: 'https://www.hotjar.com/pricing/',        id: 'mixpanel',
         name: 'Mixpanel',
         emoji: '📈',
         initials: 'MX',
@@ -170,8 +160,7 @@ export const tools: Tool[] = [
         accentColor: '#7856FF',
         implementationCta: 'Get Mixpanel instrumented in your product',
     },
-    {
-        id: 'make',
+    affiliateUrl: 'https://mixpanel.com/pricing/',        id: 'make',
         name: 'Make.com',
         emoji: '⚙️',
         initials: 'MK',
@@ -184,8 +173,7 @@ export const tools: Tool[] = [
         accentColor: '#6D00CC',
         implementationCta: 'Get your automations built on Make',
     },
-    {
-        id: 'zapier',
+    affiliateUrl: 'https://www.make.com/en/register',        id: 'zapier',
         name: 'Zapier',
         emoji: '⚡',
         initials: 'ZP',
@@ -198,8 +186,7 @@ export const tools: Tool[] = [
         accentColor: '#FF4A00',
         implementationCta: 'Get your Zapier workflows set up',
     },
-    {
-        id: 'n8n',
+    affiliateUrl: 'https://zapier.com/sign-up',        id: 'n8n',
         name: 'n8n',
         emoji: '🔧',
         initials: 'N8',
@@ -212,8 +199,7 @@ export const tools: Tool[] = [
         accentColor: '#EA4B71',
         implementationCta: 'Get n8n deployed and configured',
     },
-    {
-        id: 'jasper',
+    affiliateUrl: 'https://n8n.io/pricing',        id: 'jasper',
         name: 'Jasper',
         emoji: '✨',
         initials: 'JS',
@@ -226,8 +212,7 @@ export const tools: Tool[] = [
         accentColor: '#7C3AED',
         implementationCta: 'Get your brand voice set up in Jasper',
     },
-    {
-        id: 'claude',
+    affiliateUrl: 'https://www.jasper.ai/pricing',        id: 'claude',
         name: 'Claude',
         emoji: '🤖',
         initials: 'CL',
@@ -240,8 +225,7 @@ export const tools: Tool[] = [
         accentColor: '#D4A96A',
         implementationCta: 'Get Claude integrated into your content workflow',
     },
-    {
-        id: 'perplexity',
+    affiliateUrl: 'https://www.anthropic.com/claude',        id: 'perplexity',
         name: 'Perplexity',
         emoji: '🔎',
         initials: 'PX',
@@ -254,8 +238,7 @@ export const tools: Tool[] = [
         accentColor: '#20B2AA',
         implementationCta: 'Integrate research into your content process',
     },
-    {
-        id: 'canva',
+    affiliateUrl: 'https://www.perplexity.ai/',        id: 'canva',
         name: 'Canva',
         emoji: '🎨',
         initials: 'CV',
@@ -268,8 +251,7 @@ export const tools: Tool[] = [
         accentColor: '#00C4CC',
         implementationCta: 'Get your Canva brand kit built',
     },
-    {
-        id: 'figma',
+    affiliateUrl: 'https://www.canva.com/pricing/',        id: 'figma',
         name: 'Figma',
         emoji: '🖌️',
         initials: 'FG',
@@ -282,8 +264,7 @@ export const tools: Tool[] = [
         accentColor: '#F24E1E',
         implementationCta: 'Get your design system built in Figma',
     },
-    {
-        id: 'calendly',
+    affiliateUrl: 'https://www.figma.com/pricing/',        id: 'calendly',
         name: 'Calendly',
         emoji: '📅',
         initials: 'CY',
@@ -296,8 +277,7 @@ export const tools: Tool[] = [
         accentColor: '#006BFF',
         implementationCta: 'Get your booking workflow optimised',
     },
-    {
-        id: 'cal-com',
+    affiliateUrl: 'https://calendly.com/pricing',        id: 'cal-com',
         name: 'Cal.com',
         emoji: '📆',
         initials: 'CC',
@@ -310,8 +290,7 @@ export const tools: Tool[] = [
         accentColor: '#111827',
         implementationCta: 'Get Cal.com deployed for your team',
     },
-];
-
+    affiliateUrl: 'https://cal.com/pricing',
 export const toolCategories: ToolCategory[] = [
     'CRM',
     'SEO & GEO',
