@@ -36,6 +36,7 @@ export default function Footer() {
                             <Link href="/tools">Tools</Link>
                             <Link href="/prompts">Prompts</Link>
                             <Link href="/growth-stack">Growth Stack</Link>
+                            <Link href="/telegram-growth">Telegram Growth</Link>
                             <Link href="/compare">Comparisons</Link>
                         </div>
 
