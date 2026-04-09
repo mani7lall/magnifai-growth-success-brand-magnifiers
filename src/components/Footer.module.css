@@ -1,7 +1,8 @@
 .footer {
-    background: linear-gradient(180deg, rgba(10, 10, 11, 0.5), rgba(10, 10, 11, 0.95));
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 4rem 2rem 2rem;
+    background: #04040d;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 60px;
+    padding: 60px 2rem 2rem;
     position: relative;
 }
 
@@ -90,16 +91,16 @@
 }
 
 .linkColumn h4 {
-    color: #fff;
-    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     margin: 0 0 0.5rem 0;
 }
 
 .linkColumn a {
-    color: #94a3b8;
+    color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s;

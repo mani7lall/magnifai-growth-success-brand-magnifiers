@@ -6,7 +6,7 @@ import { XCircle } from 'lucide-react';
 
 export default function ProblemSection() {
     return (
-        <Section theme="light" className={styles.section}>
+        <Section theme="dark" className={styles.section}>
             <div className={styles.grid}>
                 <div className={styles.left}>
                     <h2 className={styles.heading}>The &quot;Agency&quot; Model is <span className={styles.strikethrough}>Broken</span>.</h2>

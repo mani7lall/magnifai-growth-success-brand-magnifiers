@@ -1,0 +1,83 @@
+You are an elite senior UI/Frontend specialist. The task is a VISUAL UPGRADE ONLY — do NOT remove, rename, or delete any text content, sections, or functionality. Only improve colors, backgrounds, gradients, typography weights, spacing, and visual polish.
+
+CRITICAL RULES:
+1. The site uses a theme toggle (light/dark). ALL styling must work by targeting the dark theme class OR by using styles that look correct in both modes. DO NOT use hardcoded dark bg colors on elements that the theme system controls via CSS vars — instead add them as explicit inline styles or use !important where needed to override the theme toggle.
+2. The single most important fix: EVERY section must have a VISUALLY DISTINCT background so users know they are in a new section. Right now everything blurs into one flat black. Fix this with alternating section backgrounds.
+3. Read src/app/globals.css FIRST to understand the CSS variable system and how dark/light mode works before touching anything.
+
+Here is EXACTLY what to do — work through these one file at a time:
+
+STEP 1 — READ globals.css and understand the theme system.
+
+STEP 2 — In globals.css, in the .dark class (or :root for dark-default), set these base vars:
+--bg-primary: #06060f
+--bg-secondary: #0c0c1e  
+--bg-card: #12122a
+--bg-accent: #1a1040
+Also add: html { color-scheme: dark; } and body { background: #06060f !important; }
+
+STEP 3 — src/components/HomeHero/index.tsx (or wherever the hero lives):
+Wrap the entire hero section in: style={{ background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124,58,237,0.35) 0%, rgba(6,6,15,0) 70%), #06060f' }}
+H1: add className that includes font-bold tracking-tight and inline gradient: style={{ background: 'linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #93c5fd 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}
+'v2.0.0 Now Live' badge: style={{ background:'rgba(124,58,237,0.2)', border:'1px solid rgba(139,92,246,0.4)', color:'#c4b5fd', borderRadius:'999px', padding:'4px 16px', fontSize:'13px' }}
+Primary CTA button: style={{ background:'linear-gradient(135deg,#7c3aed,#2563eb)', color:'#fff', borderRadius:'12px', padding:'14px 32px', fontWeight:700, boxShadow:'0 0 30px rgba(124,58,237,0.4)', border:'none' }}
+Secondary CTA: style={{ background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.12)', color:'#fff', borderRadius:'12px', padding:'14px 32px', fontWeight:600 }}
+
+STEP 4 — Stats/metrics strip (500+ clients etc):
+Section wrapper: style={{ background:'linear-gradient(90deg,#0c0c1e,#0f0a2e,#0c0c1e)', borderTop:'1px solid rgba(255,255,255,0.06)', borderBottom:'1px solid rgba(255,255,255,0.06)', padding:'32px 0' }}
+Stat numbers: give each a different color using inline styles: first=color:#a78bfa, second=color:#22d3ee, third=color:#34d399, fourth=color:#f472b6
+Stat labels: color:rgba(255,255,255,0.5), fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase'
+
+STEP 5 — TrustedBy bar:
+Wrapper: style={{ background:'#06060f', padding:'24px 0', borderBottom:'1px solid rgba(255,255,255,0.04)' }}
+"Trusted by" label: color:rgba(255,255,255,0.3), letterSpacing:'0.2em', fontSize:'11px', textTransform:'uppercase'
+Company names: color:rgba(255,255,255,0.2), letterSpacing:'0.15em', fontSize:'12px', textTransform:'uppercase'
+
+STEP 6 — ProblemSection ("Agency Model is Broken"):
+FIND this component. Section wrapper: style={{ background:'#09091a', padding:'80px 0' }}
+Section heading: inline gradient style same as hero H1 (white→purple→blue)
+Subheading/body text: color:'rgba(255,255,255,0.6)'
+Each pain point item wrapper: style={{ borderLeft:'2px solid rgba(139,92,246,0.3)', paddingLeft:'20px', marginBottom:'32px' }}
+Icon: style={{ color:'#ef4444', background:'rgba(239,68,68,0.1)', borderRadius:'50%', width:'28px', height:'28px', display:'flex', alignItems:'center', justifyContent:'center' }}
+Item title: color:'#fff', fontWeight:700
+Item body: color:'rgba(255,255,255,0.55)'
+
+STEP 7 — ValueProp / "Why WeMagnifAI" cards section:
+Section wrapper: style={{ background:'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(124,58,237,0.07) 0%, #06060f 70%)', padding:'80px 0' }}
+Each card: style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:'16px', padding:'28px', transition:'all 0.3s' }}
+Card icon wrapper: style={{ background:'linear-gradient(135deg,rgba(124,58,237,0.2),rgba(37,99,235,0.15))', borderRadius:'12px', padding:'12px', width:'48px', height:'48px', display:'flex', alignItems:'center', justifyContent:'center', marginBottom:'16px' }}
+Card title: color:'#fff', fontWeight:700
+Card body: color:'rgba(255,255,255,0.55)'
+
+STEP 8 — Telegram Spotlight section (already positioned after hero):
+Section wrapper: style={{ background:'linear-gradient(135deg,#0c0c1e 0%,#0d1a2e 100%)', padding:'80px 0', borderTop:'1px solid rgba(255,255,255,0.06)' }}
+"NEW PRODUCT · LIVE NOW" badge: style={{ background:'rgba(6,182,212,0.15)', border:'1px solid rgba(6,182,212,0.3)', color:'#22d3ee', borderRadius:'999px', padding:'4px 16px', fontSize:'12px' }}
+H2 (Telegram Growth Engine): color:'#fff', fontWeight:800
+Accent subtitle (Autonomous Lead Gen): color:'#22d3ee'
+Stat cards in dashboard mockup: style={{ background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.08)', borderRadius:'12px' }}
+Stat numbers (1,284 / 47 / 612 / £142k): first two color:'#a78bfa', last two color:'#34d399'
+
+STEP 9 — BentoGrid / System Architecture section:
+Section wrapper: style={{ background:'#0c0c1e', padding:'80px 0' }}
+Each bento card: style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:'20px', overflow:'hidden' }}
+
+STEP 10 — Newsletter/InlineCTA section:
+Wrapper: style={{ background:'linear-gradient(135deg,rgba(124,58,237,0.15),rgba(37,99,235,0.1))', border:'1px solid rgba(139,92,246,0.2)', borderRadius:'24px', margin:'0 auto', maxWidth:'600px', padding:'48px 32px', textAlign:'center' }}
+Heading: color:'#fff', fontWeight:800
+Subtext: color:'rgba(255,255,255,0.6)'
+Email input: style={{ background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', color:'#fff', borderRadius:'10px', padding:'12px 16px' }}
+Submit button: style={{ background:'linear-gradient(135deg,#7c3aed,#2563eb)', color:'#fff', borderRadius:'10px', padding:'12px 24px', fontWeight:700, border:'none' }}
+
+STEP 11 — BookingWidget / Audit CTA card:
+Card wrapper: style={{ background:'linear-gradient(135deg,#12102a,#0d0b1e)', border:'1px solid rgba(139,92,246,0.25)', borderRadius:'20px', overflow:'hidden', position:'relative' }}
+Add a top accent bar as a pseudo element or first child div: style={{ height:'3px', background:'linear-gradient(90deg,#7c3aed,#ec4899,#2563eb)', width:'100%' }}
+Heading: color:'#fff', fontWeight:800
+Body text: color:'rgba(255,255,255,0.65)'
+CTA button: style={{ background:'#fff', color:'#0a0a1a', borderRadius:'10px', fontWeight:700, padding:'14px 32px' }}
+
+STEP 12 — Footer:
+Wrapper: style={{ background:'#04040d', borderTop:'1px solid rgba(255,255,255,0.06)', paddingTop:'60px' }}
+All footer link text: color:'rgba(255,255,255,0.4)'
+Footer heading labels: color:'rgba(255,255,255,0.7)', fontWeight:700, letterSpacing:'0.1em', fontSize:'12px', textTransform:'uppercase'
+
+After ALL steps: run the app, verify it returns 200, take a screenshot, confirm NO white sections and all text is readable. Do not change any text content.

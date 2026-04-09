@@ -175,10 +175,9 @@ export default async function Home() {
 
                 {/* ── TELEGRAM GROWTH ENGINE TEASER ────────────────────────────── */}
                 <section style={{
-                    padding: '5rem 2rem',
-                    borderTop: '1px solid rgba(34,211,238,0.18)',
-                    borderBottom: '1px solid rgba(139,92,246,0.18)',
-                    background: 'linear-gradient(135deg, rgba(34,211,238,0.12) 0%, rgba(99,102,241,0.16) 45%, rgba(139,92,246,0.18) 100%)',
+                    padding: '80px 2rem',
+                    borderTop: '1px solid rgba(255,255,255,0.06)',
+                    background: 'linear-gradient(135deg, #0c0c1e 0%, #0d1a2e 100%)',
                 }}>
                     <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
                         <div style={{
@@ -192,14 +191,14 @@ export default async function Home() {
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '0.5rem',
-                                    padding: '0.35rem 0.9rem',
+                                    padding: '4px 16px',
                                     borderRadius: '9999px',
-                                    background: 'rgba(16,185,129,0.12)',
-                                    border: '1px solid rgba(16,185,129,0.25)',
+                                    background: 'rgba(6,182,212,0.15)',
+                                    border: '1px solid rgba(6,182,212,0.3)',
                                     marginBottom: '1rem',
                                 }}>
-                                    <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', display: 'inline-block' }} />
-                                    <span style={{ color: '#10b981', fontSize: '0.75rem', fontWeight: 700 }}>New Product</span>
+                                    <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22d3ee', display: 'inline-block' }} />
+                                    <span style={{ color: '#22d3ee', fontSize: '12px', fontWeight: 700 }}>New Product · Live Now</span>
                                 </div>
                                 <h2 style={{
                                     color: '#fff',
@@ -266,14 +265,14 @@ export default async function Home() {
                                         { label: 'Leads', value: '1,284' },
                                         { label: 'DMs', value: '612' },
                                         { label: 'Pipeline', value: '£142k' },
-                                    ].map(stat => (
+                                    ].map((stat, i) => (
                                         <div key={stat.label} style={{
-                                            background: 'rgba(255,255,255,0.04)',
+                                            background: 'rgba(255,255,255,0.05)',
                                             border: '1px solid rgba(255,255,255,0.08)',
-                                            borderRadius: '1rem',
+                                            borderRadius: '12px',
                                             padding: '1rem',
                                         }}>
-                                            <div style={{ color: '#22d3ee', fontSize: '1.7rem', fontWeight: 900, marginBottom: '0.25rem' }}>{stat.value}</div>
+                                            <div style={{ color: i < 2 ? '#a78bfa' : '#34d399', fontSize: '1.7rem', fontWeight: 900, marginBottom: '0.25rem' }}>{stat.value}</div>
                                             <div style={{ color: '#94a3b8', fontSize: '0.8rem', fontWeight: 700 }}>{stat.label}</div>
                                         </div>
                                     ))}
@@ -576,37 +575,45 @@ export default async function Home() {
                 {/* LEAD MAGNET CTA BAND */}
                 <section style={{
                     padding: '5rem 2rem',
-                    background: 'linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(139,92,246,0.1) 50%, rgba(236,72,153,0.08) 100%)',
-                    borderTop: '1px solid rgba(99,102,241,0.2)',
-                    borderBottom: '1px solid rgba(99,102,241,0.2)',
+                    background: '#06060f',
                     textAlign: 'center',
                 }}>
-                    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-                        <div style={{
-                            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
-                            borderRadius: '999px', padding: '0.4rem 1rem',
-                            color: '#e2e8f0', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1.5rem',
-                        }}>
-                            ✅ Free Download
+                    <div style={{
+                        maxWidth: '600px', margin: '0 auto',
+                        background: 'linear-gradient(135deg, #12102a, #0d0b1e)',
+                        border: '1px solid rgba(139,92,246,0.25)',
+                        borderRadius: '20px',
+                        overflow: 'hidden',
+                        position: 'relative',
+                    }}>
+                        <div style={{ height: '3px', background: 'linear-gradient(90deg, #7c3aed, #ec4899, #2563eb)', width: '100%' }} />
+                        <div style={{ padding: '2.5rem 2rem' }}>
+                            <div style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
+                                borderRadius: '999px', padding: '0.4rem 1rem',
+                                color: '#e2e8f0', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1.5rem',
+                            }}>
+                                ✅ Free Download
+                            </div>
+                            <h2 style={{ fontSize: '2.25rem', fontFamily: 'var(--font-playfair)', color: '#fff', fontWeight: 800, marginBottom: '0.75rem', lineHeight: 1.2 }}>
+                                Get the Website Growth Audit Checklist — Free
+                            </h2>
+                            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>
+                                Used by 2,400+ founders and growth teams to find conversion leaks and revenue opportunities.
+                            </p>
+                            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.875rem', marginBottom: '2rem' }}>
+                                80 checks · 6 sections · Instant access
+                            </p>
+                            <Link href="/lead-magnets/website-audit-checklist" style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                background: '#fff', color: '#0a0a1a',
+                                padding: '14px 32px', borderRadius: '10px',
+                                fontWeight: 700, fontSize: '1rem', textDecoration: 'none',
+                            }}>
+                                Download Free Checklist →
+                            </Link>
                         </div>
-                        <h2 style={{ fontSize: '2.25rem', fontFamily: 'var(--font-playfair)', color: '#fff', marginBottom: '0.75rem', lineHeight: 1.2 }}>
-                            Get the Website Growth Audit Checklist — Free
-                        </h2>
-                        <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>
-                            Used by 2,400+ founders and growth teams to find conversion leaks and revenue opportunities.
-                        </p>
-                        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', marginBottom: '2rem' }}>
-                            80 checks · 6 sections · Instant access
-                        </p>
-                        <Link href="/lead-magnets/website-audit-checklist" style={{
-                            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                            background: '#fff', color: '#050505',
-                            padding: '1rem 2.5rem', borderRadius: '0.75rem',
-                            fontWeight: 800, fontSize: '1rem', textDecoration: 'none',
-                        }}>
-                            Download Free Checklist →
-                        </Link>
                     </div>
                 </section>
 
@@ -678,13 +685,20 @@ export default async function Home() {
                     padding: '5rem 2rem',
                     borderTop: '1px solid rgba(255,255,255,0.06)',
                     textAlign: 'center',
+                    background: '#04040d',
                 }}>
-                    <div style={{ maxWidth: '560px', margin: '0 auto' }}>
+                    <div style={{
+                        maxWidth: '600px', margin: '0 auto',
+                        background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(37,99,235,0.1))',
+                        border: '1px solid rgba(139,92,246,0.2)',
+                        borderRadius: '24px',
+                        padding: '48px 32px',
+                    }}>
                         <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📬</div>
-                        <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-playfair)', color: '#fff', marginBottom: '0.75rem' }}>
+                        <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-playfair)', color: '#fff', fontWeight: 800, marginBottom: '0.75rem' }}>
                             Join 3,000+ Founders Getting Weekly Growth Intelligence
                         </h2>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.6, marginBottom: '2rem' }}>
+                        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem', lineHeight: 1.6, marginBottom: '2rem' }}>
                             AI tools, growth frameworks, and case study teardowns — every Thursday. Free forever.
                         </p>
                         <form action="/newsletter" method="get" style={{
@@ -693,25 +707,25 @@ export default async function Home() {
                             <input
                                 type="email" name="email" placeholder="your@email.com"
                                 style={{
-                                    flex: '1', minWidth: '220px', padding: '0.875rem 1rem',
-                                    background: 'var(--bg-secondary)',
-                                    border: '1px solid var(--glass-border)',
-                                    borderRadius: '0.625rem', color: '#fff',
+                                    flex: '1', minWidth: '220px', padding: '12px 16px',
+                                    background: 'rgba(255,255,255,0.06)',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    borderRadius: '10px', color: '#fff',
                                     fontSize: '0.95rem', outline: 'none',
                                 }}
                             />
                             <button type="submit" style={{
-                                padding: '0.875rem 1.75rem',
-                                background: '#6366f1', color: '#fff',
+                                padding: '12px 24px',
+                                background: 'linear-gradient(135deg, #7c3aed, #2563eb)', color: '#fff',
                                 fontWeight: 700, border: 'none',
-                                borderRadius: '0.625rem', cursor: 'pointer',
+                                borderRadius: '10px', cursor: 'pointer',
                                 fontSize: '0.95rem', whiteSpace: 'nowrap',
                             }}>
                                 Subscribe →
                             </button>
                         </form>
-                        <p style={{ color: '#475569', fontSize: '0.8rem', marginTop: '1rem' }}>
-                            No spam · Unsubscribe anytime · <Link href="/newsletter" style={{ color: '#818cf8', textDecoration: 'none' }}>See recent issues</Link>
+                        <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem', marginTop: '1rem' }}>
+                            No spam · Unsubscribe anytime · <Link href="/newsletter" style={{ color: '#a78bfa', textDecoration: 'none' }}>See recent issues</Link>
                         </p>
                     </div>
                 </section>

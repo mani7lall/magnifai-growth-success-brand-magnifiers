@@ -14,6 +14,11 @@
 
 .heroContent {
     text-align: left;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    padding: 0 1rem;
 }
 
 .heroFormWrapper {
@@ -24,12 +29,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 16px;
+    background: rgba(124, 58, 237, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.4);
     border-radius: 999px;
-    color: #fff;
-    font-size: 0.85rem;
+    color: #c4b5fd;
+    font-size: 13px;
     font-weight: 600;
     margin-bottom: 2rem;
 }
@@ -130,8 +135,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--glass-border);
-    background: linear-gradient(180deg, #0f0f23 0%, #1a1a2e 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124, 58, 237, 0.35) 0%, rgba(6, 6, 15, 0) 70%), #06060f;
 }
 
 .glowOrb1 {
@@ -173,13 +178,16 @@
 
 .heroTitle {
     font-size: clamp(3rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 800;
+    line-height: 1.15;
     letter-spacing: -0.025em;
     margin-bottom: 1.5rem;
-    color: #fff;
     position: relative;
     z-index: 1;
+    background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .gradient {
@@ -309,5 +317,119 @@
     100% {
         transform: scale(1);
         opacity: 0.8;
+    }
+}
+
+/* CTA BUTTONS */
+.ctaGroup {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.primaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primaryCta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+}
+
+.secondaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.secondaryCta:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* METRICS STRIP */
+.metricsStrip {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: linear-gradient(90deg, #0c0c1e, #0f0a2e, #0c0c1e);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 32px 0;
+    flex-wrap: wrap;
+}
+
+.metricItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 3rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metricItem:last-child {
+    border-right: none;
+}
+
+.metricValue {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.metricItem:nth-child(1) .metricValue { color: #a78bfa; }
+.metricItem:nth-child(2) .metricValue { color: #22d3ee; }
+.metricItem:nth-child(3) .metricValue { color: #34d399; }
+.metricItem:nth-child(4) .metricValue { color: #f472b6; }
+
+.metricLabel {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* SECTION DARK */
+.sectionDark {
+    background: #0c0c1e;
+    padding: 80px 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .metricsStrip {
+        gap: 1.5rem;
+    }
+    .metricItem {
+        padding: 0 1.5rem;
+        border-right: none;
     }
 }

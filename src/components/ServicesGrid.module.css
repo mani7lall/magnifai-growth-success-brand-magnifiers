@@ -1,5 +1,7 @@
 .section {
-    padding: 5rem 2rem;
+    padding: 80px 2rem;
+    background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(124, 58, 237, 0.06) 0%, transparent 70%), #07070f;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .container {

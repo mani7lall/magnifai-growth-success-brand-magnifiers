@@ -8,38 +8,46 @@
 .heading {
     font-size: 4rem;
     line-height: 1;
-    color: #000;
+    color: #fff;
     margin-bottom: 2rem;
     letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .strikethrough {
     text-decoration: line-through;
     text-decoration-color: #ef4444;
     text-decoration-thickness: 4px;
+    -webkit-text-fill-color: #ef4444;
 }
 
 .lead {
     font-size: 1.5rem;
-    color: #475569;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
 }
 
 .card {
     padding: 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
+    border-left: 2px solid rgba(139, 92, 246, 0.3);
+    padding-left: 20px;
+    margin-bottom: 2rem;
+    border-bottom: none;
 }
 
 .card h3 {
     font-family: var(--font-manrope);
-    color: #000;
+    color: #fff;
+    font-weight: 700;
     font-size: 1.25rem;
     margin: 1rem 0 0.5rem 0;
 }
 
 .card p {
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.55);
     margin: 0;
 }
 
