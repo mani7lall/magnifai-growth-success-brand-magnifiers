@@ -69,6 +69,7 @@ const NAV = [
             {
                 heading: 'Growth Tools',
                 links: [
+                    { label: '🚀 Telegram Growth', href: '/telegram-growth' },
                     { label: 'Growth Stack', href: '/growth-stack' },
                     { label: 'AI Directory', href: '/directory' },
                     { label: 'Prompts Library', href: '/prompts' },

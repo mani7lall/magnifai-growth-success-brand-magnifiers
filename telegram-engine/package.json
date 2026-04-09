@@ -1,0 +1,40 @@
+{
+  "name": "wemagnifai-telegram-engine",
+  "version": "1.0.0",
+  "description": "Autonomous Telegram organic marketing and lead generation engine for WeMagnifAI",
+  "main": "scheduler.js",
+  "scripts": {
+    "start": "node scheduler.js",
+    "dev": "node --watch scheduler.js",
+    "auth": "node core/bot_engine.js --auth",
+    "discover": "node modules/group_discovery.js",
+    "post": "node modules/group_poster.js",
+    "scrape": "node modules/lead_scraper.js",
+    "dm": "node modules/dm_outreach.js",
+    "engage": "node modules/comment_engager.js",
+    "analytics": "node modules/analytics_tracker.js"
+  },
+  "dependencies": {
+    "telegram": "^2.19.8",
+    "openai": "^4.47.1",
+    "node-cron": "^3.0.3",
+    "winston": "^3.13.0",
+    "big-integer": "^1.6.52",
+    "input": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "telegram",
+    "automation",
+    "lead-generation",
+    "marketing",
+    "ai"
+  ],
+  "author": "WeMagnifAI",
+  "license": "UNLICENSED"
+}

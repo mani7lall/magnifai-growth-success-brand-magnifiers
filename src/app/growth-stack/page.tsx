@@ -81,6 +81,62 @@ export default function GrowthStackPage() {
                     </div>
                 </section>
 
+                {/* FEATURED PRODUCT: TELEGRAM GROWTH */}
+                <section style={{ padding: '3rem 2rem 0' }}>
+                    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                        <div style={{
+                            background: 'linear-gradient(135deg, rgba(99,102,241,0.15) 0%, rgba(139,92,246,0.1) 50%, rgba(34,211,238,0.08) 100%)',
+                            border: '1px solid rgba(99,102,241,0.35)',
+                            borderRadius: '1.5rem', padding: '2.5rem',
+                            display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap',
+                            marginBottom: '3rem',
+                        }}>
+                            <div style={{ fontSize: '3rem' }}>🚀</div>
+                            <div style={{ flex: 1, minWidth: '260px' }}>
+                                <div style={{
+                                    display: 'inline-block',
+                                    background: 'rgba(16,185,129,0.12)', border: '1px solid rgba(16,185,129,0.25)',
+                                    color: '#10b981', fontSize: '0.7rem', fontWeight: 700,
+                                    padding: '0.2rem 0.6rem', borderRadius: '9999px',
+                                    textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.75rem',
+                                }}>
+                                    WeMagnifAI Product
+                                </div>
+                                <h2 style={{ color: '#fff', fontWeight: 800, fontSize: '1.5rem', margin: '0 0 0.5rem' }}>
+                                    Telegram Growth Engine
+                                </h2>
+                                <p style={{ color: '#94a3b8', margin: '0 0 1rem', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                                    Autonomous Telegram lead generation — discovers niche groups, posts AI content, scrapes qualified leads, and sends personalised DM sequences 24/7.
+                                </p>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                                    <a href="/telegram-growth" style={{
+                                        background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                                        color: '#fff', padding: '0.6rem 1.25rem', borderRadius: '0.625rem',
+                                        fontWeight: 700, textDecoration: 'none', fontSize: '0.875rem',
+                                    }}>
+                                        Learn More →
+                                    </a>
+                                    <a href="/telegram-dashboard" style={{
+                                        background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
+                                        color: '#e2e8f0', padding: '0.6rem 1.25rem', borderRadius: '0.625rem',
+                                        fontWeight: 600, textDecoration: 'none', fontSize: '0.875rem',
+                                    }}>
+                                        View Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+                                {[['1,284', 'Leads this week'], ['47', 'Groups joined'], ['£140k', 'Pipeline generated']].map(([val, lbl]) => (
+                                    <div key={lbl} style={{ textAlign: 'center', minWidth: '80px' }}>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#6366f1' }}>{val}</div>
+                                        <div style={{ color: '#475569', fontSize: '0.75rem' }}>{lbl}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* TOOL CATEGORIES */}
                 <section style={{ padding: '4rem 2rem' }}>
                     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

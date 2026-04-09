@@ -1,0 +1,87 @@
+{
+  "telegram_api_id": 12345678,
+  "telegram_api_hash": "your_api_hash_here",
+  "phone": "+447700123456",
+  "bot_token": "optional_bot_token_from_botfather",
+  "session_name": "wemagnifai_session",
+
+  "openai_api_key": "sk-your-openai-key-here",
+  "openai_model": "gpt-4o",
+
+  "target_keywords": [
+    "AI agency",
+    "digital marketing",
+    "automation",
+    "growth hacking",
+    "SaaS founders",
+    "B2B marketing",
+    "lead generation",
+    "content marketing",
+    "startup founders",
+    "marketing automation"
+  ],
+
+  "niche": "AI Growth Agency",
+  "brand_name": "WeMagnifAI",
+  "website_url": "https://wemagnifai.com",
+  "cta_message": "We help B2B brands build AI-powered growth systems → wemagnifai.com",
+
+  "value_proposition": "We build custom AI systems that handle marketing, lead gen, and content at scale — so founders can focus on closing deals.",
+
+  "daily_message_limit": 50,
+  "daily_group_join_limit": 10,
+  "daily_dm_limit": 25,
+  "daily_post_limit": 15,
+  "daily_comment_limit": 30,
+
+  "human_delay_min_seconds": 45,
+  "human_delay_max_seconds": 180,
+  "post_cooldown_hours": 48,
+  "group_activity_threshold": 100,
+
+  "min_group_members": 200,
+  "max_group_members": 50000,
+  "lead_score_threshold": 5,
+
+  "blacklisted_groups": [],
+  "blacklisted_keywords": ["crypto", "forex", "trading", "investment", "pump"],
+
+  "accounts": [
+    {
+      "name": "main",
+      "api_id": 12345678,
+      "api_hash": "your_api_hash_here",
+      "phone": "+447700123456",
+      "session_name": "session_main"
+    }
+  ],
+
+  "posting_schedule": {
+    "group_discovery_hour": 8,
+    "content_posting_hour": 10,
+    "lead_scraping_hour": 14,
+    "comment_engagement_hour": 18,
+    "analytics_report_hour": 22
+  },
+
+  "content_templates": [
+    "value_tip",
+    "mini_case_study",
+    "question_post",
+    "resource_share",
+    "poll_post"
+  ],
+
+  "dm_sequence": {
+    "intro_delay_hours": 0,
+    "value_delay_hours": 24,
+    "cta_delay_hours": 72
+  },
+
+  "logging": {
+    "level": "info",
+    "file": "logs/engine.log",
+    "max_files": 7,
+    "max_size": "10m"
+  }
+}

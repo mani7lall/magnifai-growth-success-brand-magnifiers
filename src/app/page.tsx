@@ -606,6 +606,77 @@ export default async function Home() {
                     </div>
                 </section>
 
+                {/* TELEGRAM GROWTH TEASER */}
+                <section style={{
+                    padding: '5rem 2rem',
+                    borderTop: '1px solid var(--glass-border)',
+                    borderBottom: '1px solid var(--glass-border)',
+                    background: 'radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.1) 0%, transparent 65%)',
+                }}>
+                    <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                            <div style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)',
+                                padding: '0.35rem 1rem', borderRadius: '9999px', marginBottom: '1.25rem',
+                            }}>
+                                <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#10b981' }} />
+                                <span style={{ color: '#10b981', fontSize: '0.75rem', fontWeight: 700 }}>New Product</span>
+                            </div>
+                            <h2 style={{
+                                fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 900,
+                                color: '#fff', lineHeight: 1.15, fontFamily: 'var(--font-playfair)',
+                                marginBottom: '1rem',
+                            }}>
+                                Telegram Growth Engine —<br />
+                                <span style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                                    Your Outreach, on Autopilot
+                                </span>
+                            </h2>
+                            <p style={{ color: '#64748b', fontSize: '1.05rem', maxWidth: '580px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+                                Discovers niche groups, posts AI-generated expert content, scrapes 180+ qualified leads/week, and sends personalised DM sequences — all running 24/7 without you.
+                            </p>
+                            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+                                <Link href="/telegram-growth" style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                    background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                                    color: '#fff', padding: '0.875rem 2rem', borderRadius: '0.875rem',
+                                    fontWeight: 700, textDecoration: 'none', fontSize: '1rem',
+                                    boxShadow: '0 0 30px rgba(99,102,241,0.3)',
+                                }}>
+                                    Start 7-Day Free Trial →
+                                </Link>
+                                <Link href="/telegram-dashboard" style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                                    background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+                                    color: '#e2e8f0', padding: '0.875rem 1.75rem', borderRadius: '0.875rem',
+                                    fontWeight: 600, textDecoration: 'none', fontSize: '1rem',
+                                }}>
+                                    View Live Demo
+                                </Link>
+                            </div>
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
+                            {[
+                                { icon: '🔍', label: 'Group Discovery', desc: 'AI finds & scores niche groups by keyword relevance' },
+                                { icon: '📝', label: 'AI Content', desc: 'GPT-4o generates platform-native posts for each group' },
+                                { icon: '🎯', label: 'Lead Scoring', desc: 'Qualifies every profile 1–10 on niche fit automatically' },
+                                { icon: '💬', label: 'DM Sequences', desc: 'Personalised 3-step outreach with AI reply handling' },
+                                { icon: '📊', label: 'Live Dashboard', desc: 'Real-time feed, group table, analytics, and controls' },
+                            ].map(item => (
+                                <div key={item.label} style={{
+                                    background: 'var(--bg-secondary)', border: '1px solid var(--glass-border)',
+                                    borderRadius: '1rem', padding: '1.25rem', textAlign: 'center',
+                                }}>
+                                    <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{item.icon}</div>
+                                    <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.875rem', marginBottom: '0.35rem' }}>{item.label}</div>
+                                    <div style={{ color: '#475569', fontSize: '0.775rem', lineHeight: 1.5 }}>{item.desc}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Testimonials */}
                 <Testimonials />
             </main>

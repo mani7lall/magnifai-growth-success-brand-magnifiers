@@ -1,0 +1,15 @@
+{
+  "daily": [],
+  "totals": {
+    "groups_discovered": 0,
+    "groups_joined": 0,
+    "posts_published": 0,
+    "leads_scraped": 0,
+    "dms_sent": 0,
+    "replies_received": 0,
+    "comments_posted": 0,
+    "estimated_pipeline": 0
+  },
+  "last_report": null,
+  "last_updated": null
+}

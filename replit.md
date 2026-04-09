@@ -28,6 +28,20 @@ A full-featured Next.js 16 (App Router) agency website for WeMagnifAI, "The AI G
 - Prismic only initialises when `ENABLE_PRISMIC=true` AND `PRISMIC_ACCESS_TOKEN` are both set.
 - **Next.js 16 `params` rule:** All dynamic `[slug]` page components and `generateMetadata` functions MUST be `async` and use `const { slug } = await params`. Type: `params: Promise<{ slug: string }>`. Applied to: `/blog/[slug]`, `/case-studies/[slug]`, `/compare/[slug]`, `/legal/[slug]`, `/company/[slug]`, `/services/[slug]`.
 
+## Telegram Growth Engine
+
+A complete autonomous Telegram marketing system in `/telegram-engine/`:
+- **Bot Engine** — GramJS MTProto client, cron scheduler, 8 modules
+- **Modules** — `group_discovery`, `group_joiner`, `content_generator`, `group_poster`, `lead_scraper`, `dm_outreach`, `comment_engager`, `analytics_tracker`
+- **Safety** — `safety/rate_limiter.js`: daily limits, exponential backoff, flood-wait, human delays
+- **Utils** — `utils/logger.js` (Winston), `utils/db.js` (JSON persistence)
+- **Data** — `data/groups_db.json`, `leads_db.json`, `contacted_db.json`, `analytics.json`
+- **Dashboard** — `/telegram-dashboard` — real-time looking dashboard with 5 tabs, mock data, campaign controls
+- **Sales page** — `/telegram-growth` — full sales page with pricing ($97/$197/$397), how-it-works, FAQ
+- **Nav** — Added "🚀 Telegram Growth" to Tools → Growth Tools dropdown
+- **Growth Stack** — Featured product card at top of `/growth-stack`
+- **Homepage** — Telegram teaser section added before Testimonials
+
 ## Site Structure
 
 ### Pages (all return 200)
